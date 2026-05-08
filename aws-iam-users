@@ -1,0 +1,27 @@
+# AWS IAM Users Learning
+
+1. Explored IAM dashboard and IAM interface.
+
+2. Created multiple IAM users:
+
+* admin-user
+* billing-user
+* developer-user
+* s3-user
+* Alpha
+
+3. Learned permission segregation using IAM users.
+
+4. Logged into IAM users using Incognito mode.
+
+5. Learned difference between Root Account and IAM User.
+
+---
+
+# Learnings
+
+1. IAM improves AWS account security.
+
+2. Different IAM users can have different permissions.
+
+3. Root account should not be used for daily work.
