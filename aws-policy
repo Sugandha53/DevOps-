@@ -1,0 +1,31 @@
+# AWS Policies
+
+1. Explored AWS managed policies.
+
+2. Viewed policies related to:
+
+* S3
+* Billing
+* RDS
+
+3. Added permissions to IAM users.
+
+4. Tested Access Denied before assigning permissions.
+
+5. Explored how policies control access to AWS services.
+
+6. Created custom S3 policy.
+
+7. Attached custom policy to IAM user.
+
+---
+
+# Notes
+
+1. Policies define permissions in AWS.
+
+2. Missing permissions cause Access Denied errors.
+
+3. Different users can have different access levels.
+
+4. Custom policies provide controlled access.
