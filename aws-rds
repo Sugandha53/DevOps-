@@ -1,0 +1,21 @@
+# AWS RDS
+
+1. Opened RDS service using IAM user.
+
+2. Tested database creation permissions.
+
+3. Observed Access Denied before assigning permissions.
+
+4. Added RDS permission and tested database access again.
+
+5. Explored how IAM policies control database access.
+
+---
+
+# Notes
+
+1. RDS is AWS relational database service.
+
+2. IAM policies control service permissions.
+
+3. Access Denied occurs when required permissions are missing.
