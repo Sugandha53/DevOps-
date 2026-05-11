@@ -1,0 +1,30 @@
+Learned AWS IAM blocking and restriction concepts using S3 bucket permissions.
+
+Created an S3 bucket:
+- sugandha-private-alpha-bucket
+
+Configured bucket access for the Alpha IAM user.
+
+Learned the difference between:
+- Allow permissions
+- Deny permissions
+
+Created an explicit deny policy to block:
+- s3:DeleteObject
+- s3:DeleteBucket
+
+Understood that:
+- Allow gives access
+- Deny blocks actions
+- Explicit Deny overrides Allow in AWS IAM
+
+Attached the deny policy to the Alpha IAM user.
+
+Logged in as Alpha using Incognito mode for testing.
+
+Uploaded a file successfully to the S3 bucket.
+
+Tested delete operation and received:
+- Access Denied
+
+Verified that the delete restriction policy worked correctly for the Alpha user.
