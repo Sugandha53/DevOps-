@@ -1,0 +1,53 @@
+# AWS S3 Blocking and Access Control
+
+1. Created an S3 bucket:
+
+* sugandha-test-bucket
+
+2. Created a custom bucket access policy:
+
+* TestBucketAccess
+
+3. Attached the bucket access policy to:
+
+* Alpha
+* s3-user
+
+4. Verified that:
+
+* Alpha user could access the bucket
+* s3-user could access the bucket
+
+5. Tested bucket access using direct S3 bucket URL.
+
+6. Created an explicit deny policy:
+
+* DenyTestBucketAccess
+
+7. Configured blocking for:
+
+* billing-user
+* developer-user
+* admin-user
+
+8. Attached the explicit deny policy to restricted IAM users.
+
+9. Verified that blocked users received:
+
+* Access Denied
+* Insufficient permissions
+
+10. Learned the difference between:
+
+* bucket listing permissions
+* bucket object access permissions
+
+11. Learned AWS IAM concepts:
+
+* Allow Policy
+* Explicit Deny Policy
+* Deny overrides Allow
+* Least Privilege Access
+
+12. Used the direct S3 bucket URL for permission testing:
+    https://us-east-1.console.aws.amazon.com/s3/buckets/sugandha-test-bucket
