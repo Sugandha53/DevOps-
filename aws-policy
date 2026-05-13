@@ -1,31 +1,245 @@
-# AWS Policies
+# AWS Policies Learning
 
-1. Explored AWS managed policies.
+# Introduction
 
-2. Viewed policies related to:
-
-* S3
-* Billing
-* RDS
-
-3. Added permissions to IAM users.
-
-4. Tested Access Denied before assigning permissions.
-
-5. Explored how policies control access to AWS services.
-
-6. Created custom S3 policy.
-
-7. Attached custom policy to IAM user.
+This practical task was performed to understand AWS IAM policies, permission management, managed policies, custom policies, and AWS service access control. Different policies were explored and attached to IAM users to understand how AWS controls permissions using IAM policies.
 
 ---
 
-# Notes
+# Objective
 
-1. Policies define permissions in AWS.
+The objectives of this task were:
 
-2. Missing permissions cause Access Denied errors.
+1. To understand AWS IAM policies.
+2. To explore AWS managed policies.
+3. To learn how permissions are assigned to IAM users.
+4. To understand Access Denied errors.
+5. To create and test custom S3 policies.
+6. To understand permission-based access control in AWS.
 
-3. Different users can have different access levels.
+---
 
-4. Custom policies provide controlled access.
+# AWS Services Used
+
+1. AWS IAM (Identity and Access Management)
+2. Amazon S3
+3. Amazon RDS
+4. AWS Billing and Cost Management
+5. IAM Policies
+6. IAM Users
+
+---
+
+# AWS Managed Policies Exploration
+
+Explored AWS managed policies available inside IAM.
+
+Purpose:
+- To understand how AWS provides predefined permission sets for different services.
+
+Managed policies studied included:
+
+1. AmazonS3FullAccess
+2. AmazonRDSFullAccess
+3. Billing permissions
+4. ReadOnlyAccess
+5. AdministratorAccess
+
+---
+
+# Services Explored Through Policies
+
+## 1. Amazon S3 Policies
+
+Explored S3-related permissions such as:
+
+- s3:ListBucket
+- s3:GetObject
+- s3:PutObject
+- s3:DeleteObject
+
+Purpose:
+- To understand bucket-level and object-level access control.
+
+---
+
+## 2. Billing Policies
+
+Explored billing-related permissions.
+
+Purpose:
+- To understand how AWS controls billing dashboard access.
+
+Observed:
+- Users without billing permissions cannot access billing sections.
+
+---
+
+## 3. Amazon RDS Policies
+
+Explored RDS-related permissions.
+
+Purpose:
+- To understand database service access control.
+
+Observed:
+- Users without RDS permissions receive Access Denied errors.
+
+---
+
+# IAM User Permission Testing
+
+Permissions were tested using multiple IAM users.
+
+Activities Performed:
+
+1. Logged into IAM users.
+2. Attempted service access without permissions.
+3. Observed Access Denied errors.
+4. Attached policies to users.
+5. Tested access again after permission assignment.
+
+---
+
+# Access Denied Testing
+
+Tested AWS services before assigning permissions.
+
+Observed Errors:
+- Access Denied
+- Insufficient Permissions
+
+Purpose:
+- To understand how AWS blocks unauthorized actions.
+
+---
+
+# Policy Attachment Process
+
+Performed the following steps:
+
+1. Opened IAM Users section.
+2. Selected IAM user.
+3. Opened “Add Permissions”.
+4. Attached AWS managed policy.
+5. Saved changes.
+6. Logged in again for testing.
+
+Purpose:
+- To understand how policies provide service access.
+
+---
+
+# Custom S3 Policy Creation
+
+Created a custom S3 policy for controlled bucket access.
+
+Purpose:
+- To provide limited S3 access to selected IAM users.
+
+Permissions Included:
+- Bucket viewing
+- Object upload
+- Object reading
+
+Benefits:
+- Controlled access management
+- Better AWS security
+- Limited permissions for users
+
+---
+
+# Custom Policy Attachment
+
+Attached custom S3 policy to IAM users.
+
+Purpose:
+- To verify custom permission behavior.
+
+Observed:
+- Users received access only to allowed actions.
+
+---
+
+# IAM Concepts Learned
+
+## 1. Policies Define Permissions
+
+AWS IAM policies determine:
+- What actions users can perform
+- Which services users can access
+- Which resources users can use
+
+---
+
+## 2. Missing Permissions Cause Access Denied
+
+If required permissions are missing:
+- AWS blocks the action
+- Access Denied error is displayed
+
+---
+
+## 3. Different Users Can Have Different Access Levels
+
+AWS IAM allows:
+- Service-specific permissions
+- Limited user access
+- Role-based permission management
+
+---
+
+## 4. Custom Policies Provide Controlled Access
+
+Custom policies help:
+- Restrict unnecessary permissions
+- Improve security
+- Implement least privilege access
+
+---
+
+# Security Concepts Learned
+
+## Principle of Least Privilege
+
+Users should receive:
+- Only required permissions
+- Limited service access
+- Restricted administrative privileges
+
+Purpose:
+- Better AWS security management.
+
+---
+
+# Observations
+
+1. IAM policies are the core of AWS permission management.
+
+2. AWS managed policies simplify permission assignment.
+
+3. Custom policies provide more controlled access.
+
+4. Access Denied errors occur when permissions are missing.
+
+5. Different users can be assigned different permission levels.
+
+---
+
+# Learning Outcome
+
+After completing this task, the following concepts were understood:
+
+1. AWS IAM policy management.
+2. AWS managed policies.
+3. Custom policy creation.
+4. IAM permission attachment process.
+5. Access Denied behavior.
+6. Service-level permission control.
+7. Secure AWS access management.
+
+---
+
+# Conclusion
+
+This practical task helped in understanding AWS IAM policies and permission management. Different AWS managed policies and custom S3 policies were tested to understand how AWS controls service access and user permissions securely.
