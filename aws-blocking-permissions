@@ -1,30 +1,248 @@
-Learned AWS IAM blocking and restriction concepts using S3 bucket permissions.
+# AWS IAM Blocking and Restriction Learning
 
-Created an S3 bucket:
-- sugandha-private-alpha-bucket
+# Introduction
 
-Configured bucket access for the Alpha IAM user.
+This practical task was performed to understand AWS IAM user management, S3 bucket access control, permission handling, and explicit deny policies. Multiple IAM users were created and tested with different permission levels to understand how AWS IAM controls access to AWS resources.
 
-Learned the difference between:
-- Allow permissions
-- Deny permissions
+---
 
-Created an explicit deny policy to block:
-- s3:DeleteObject
-- s3:DeleteBucket
+# Objective
 
-Understood that:
-- Allow gives access
-- Deny blocks actions
-- Explicit Deny overrides Allow in AWS IAM
+The objectives of this practical task were:
 
-Attached the deny policy to the Alpha IAM user.
+1. To create and manage IAM users.
+2. To understand AWS IAM permissions.
+3. To allow S3 bucket access for selected users.
+4. To block S3 bucket access for restricted users.
+5. To test AWS IAM policies using real login credentials.
+6. To understand Allow and Explicit Deny concepts.
 
-Logged in as Alpha using Incognito mode for testing.
+---
 
-Uploaded a file successfully to the S3 bucket.
+# AWS Services Used
 
-Tested delete operation and received:
+1. AWS IAM (Identity and Access Management)
+2. Amazon S3 (Simple Storage Service)
+3. IAM Policies
+4. IAM Users
+5. AWS Console Login
+
+---
+
+# IAM Users Created
+
+The following IAM users were available in the AWS account:
+
+1. admin-user
+2. Alpha
+3. billing-user
+4. developer-user
+5. s3-user
+
+Purpose:
+- To test different permission levels and access restrictions.
+
+---
+
+# Step-by-Step Implementation
+
+## 1. Created an S3 Bucket
+
+Created an S3 bucket for permission testing.
+
+Bucket Name:
+- sugandha-test-bucket
+
+Purpose:
+- To test bucket access using different IAM users.
+
+---
+
+## 2. Created Custom S3 Access Policy
+
+Created a custom IAM policy for bucket access.
+
+Policy Name:
+- TestBucketAccess
+
+Permissions Included:
+- s3:ListBucket
+- s3:GetObject
+- s3:PutObject
+
+Purpose:
+- To provide bucket access to selected users.
+
+---
+
+## 3. Attached Allow Policy to Selected Users
+
+The allow policy was attached to:
+
+Allowed Users:
+- Alpha
+- s3-user
+
+These users were allowed to:
+- Open the S3 bucket
+- Upload files
+- View bucket contents
+- Access bucket using direct URL
+
+---
+
+# Bucket Access Verification
+
+Tested bucket access using:
+- IAM login URL
+- Incognito browser mode
+- Separate IAM credentials
+
+Verified that:
+- Alpha user could access the bucket.
+- s3-user could access the bucket successfully.
+
+---
+
+# Direct Bucket URL Testing
+
+Used direct S3 bucket URL:
+
+https://us-east-1.console.aws.amazon.com/s3/buckets/sugandha-test-bucket
+
+Purpose:
+- To test bucket access permissions directly.
+
+Observation:
+- Users with bucket permissions could open the bucket successfully.
+
+---
+
+# Blocking Restricted Users
+
+## 4. Created Explicit Deny Policy
+
+Created a deny policy to restrict bucket access for selected IAM users.
+
+Policy Name:
+- DenyTestBucketAccess
+
+Blocked Permissions:
+- s3:ListBucket
+- s3:GetObject
+- s3:PutObject
+
+Purpose:
+- To prevent unauthorized users from accessing the S3 bucket.
+
+---
+
+## 5. Attached Deny Policy to Restricted Users
+
+The deny policy was attached to:
+
+Blocked Users:
+- admin-user
+- developer-user
+- billing-user
+
+These users were restricted from:
+- Viewing bucket contents
+- Uploading files
+- Opening the bucket
+- Accessing bucket objects
+
+---
+
+# Access Restriction Testing
+
+Logged in using blocked IAM users and tested S3 bucket access.
+
+Observed Results:
 - Access Denied
+- Insufficient Permissions
 
-Verified that the delete restriction policy worked correctly for the Alpha user.
+Blocked users could not:
+- Open bucket objects
+- Upload files
+- View bucket contents
+
+---
+
+# IAM Concepts Learned
+
+## 1. Allow Policy
+
+Allow policies provide access permissions.
+
+Examples:
+- View bucket
+- Upload files
+- Read objects
+
+---
+
+## 2. Explicit Deny Policy
+
+Explicit deny policies block access even if another allow policy exists.
+
+Important Rule:
+- Explicit Deny always overrides Allow in AWS IAM.
+
+---
+
+## 3. Difference Between Bucket Listing and Direct Bucket Access
+
+Learned that:
+
+### Bucket Listing Permission
+Allows user to see bucket list in S3 dashboard.
+
+### Direct Bucket Access
+Allows user to open bucket directly using URL if permission exists.
+
+---
+
+# Browser Testing
+
+Testing was performed using:
+- Incognito mode
+- IAM user login credentials
+- Direct S3 bucket URL
+
+Purpose:
+- To verify actual user-level permissions.
+
+---
+
+# Observations
+
+1. AWS IAM controls access using policies.
+
+2. Different IAM users can have different permission levels.
+
+3. Explicit deny policies successfully restrict access.
+
+4. Bucket permissions can be tested using direct URLs.
+
+5. IAM security works based on attached policies.
+
+---
+
+# Learning Outcome
+
+After completing this task, the following concepts were understood:
+
+1. AWS IAM user management.
+2. IAM permission attachment process.
+3. S3 bucket access control.
+4. Explicit deny policy behavior.
+5. Allow vs Deny permissions.
+6. Bucket access testing using IAM users.
+7. AWS security best practices.
+
+---
+
+# Conclusion
+
+This practical implementation helped in understanding AWS IAM permission management, S3 bucket access control, and explicit deny policies. Different IAM users were tested with different permission levels to understand how AWS controls access to cloud resources securely.
