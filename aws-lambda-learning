@@ -1,0 +1,229 @@
+AWS Learning Through Documentation and Video Study
+
+
+Introduction
+
+This learning activity was performed to improve AWS cloud knowledge through documentation reading, video learning, AWS Console exploration, and concept revision. The session mainly focused on understanding AWS Lambda concepts and revising previously learned AWS services.
+
+Objective
+
+The objectives of this learning session were:
+
+To continue AWS cloud learning.
+To study AWS services using documentation and videos.
+To understand AWS Lambda concepts.
+To revise previously learned AWS services.
+To improve understanding of AWS workflows and cloud architecture.
+To maintain GitHub documentation for daily learning activities.
+Learning Activities Performed
+1. Studied AWS Documentation
+
+Read AWS-related documentation to understand cloud services and workflows.
+
+Topics explored:
+
+AWS Lambda
+IAM concepts
+S3 permissions
+SNS and SES workflows
+CloudWatch monitoring
+
+Purpose:
+
+To understand AWS concepts using official documentation.
+2. Watched AWS Learning Videos
+
+Studied AWS concepts through learning videos.
+
+Topics covered:
+
+Serverless computing
+Lambda triggers
+Event-driven execution
+AWS monitoring concepts
+
+Purpose:
+
+To improve practical understanding of AWS services and workflows.
+3. Explored AWS Lambda Concepts
+
+Learned about AWS Lambda service and serverless computing.
+
+Topics learned:
+
+Lambda functions
+Triggers
+Automatic scaling
+Timeout concepts
+Event-driven architecture
+
+Purpose:
+
+To understand how AWS runs code automatically without managing servers.
+Lambda Workflow Studied
+
+Trigger/Event → Lambda Function → Output
+
+Examples of triggers explored:
+
+S3 events
+SNS notifications
+API requests
+CloudWatch events
+Revision of Previously Learned AWS Services
+
+Revised previously explored AWS services:
+
+IAM
+S3
+IAM Policies
+RDS
+SNS
+SES
+
+Purpose:
+
+To strengthen AWS cloud fundamentals.
+AWS Console Exploration
+
+Performed practical exploration inside AWS Console.
+
+Activities included:
+
+Exploring service dashboards
+Viewing monitoring sections
+Understanding AWS workflows visually
+
+Purpose:
+
+To improve practical AWS familiarity.
+GitHub Documentation Work
+
+Updated GitHub learning repository with:
+
+AWS learning notes
+Daily learning activities
+AWS service documentation
+Concept summaries
+
+Purpose:
+
+To maintain proper documentation and learning consistency.
+Learnings
+AWS documentation helps understand real cloud workflows and architecture.
+Video learning improves practical understanding of AWS services.
+AWS Lambda is a serverless compute service that runs code automatically based on triggers.
+CloudWatch is used to monitor AWS services, logs, and execution metrics.
+Continuous learning and documentation are important in DevOps and cloud environments.
+Conclusion
+
+This learning activity helped in improving AWS cloud understanding through documentation reading, video learning, AWS Console exploration, and concept revision. The session strengthened understanding of AWS Lambda, serverless computing, monitoring concepts, and AWS workflows while improving documentation practices for DevOps learning.
+
+Pasted text(25).txt
+Document
+like this but in little short and dont too short  -
+AWS Learning Through Documentation and Video Study
+Introduction
+
+This learning activity was performed to improve AWS cloud knowledge through documentation reading, video learning, AWS Console exploration, and concept revision. The session mainly focused on understanding AWS Lambda concepts and revising previously learned AWS services.
+
+Objective
+
+The objectives of this learning session were:
+
+To continue AWS cloud learning.
+To study AWS services using documentation and videos.
+To understand AWS Lambda and serverless computing concepts.
+To revise previously learned AWS services.
+To improve understanding of AWS workflows and cloud architecture.
+Learning Activities Performed
+1. Studied AWS Documentation
+
+Read AWS-related documentation to understand cloud services and workflows.
+
+Topics explored:
+
+AWS Lambda
+IAM concepts
+S3 permissions
+SNS and SES workflows
+CloudWatch monitoring
+
+Purpose:
+
+To understand AWS concepts using official documentation.
+2. Watched AWS Learning Videos
+
+Studied AWS concepts through learning videos.
+
+Topics covered:
+
+Serverless computing
+Lambda triggers
+Event-driven execution
+AWS monitoring concepts
+
+Purpose:
+
+To improve practical understanding of AWS services and workflows.
+3. Explored AWS Lambda Concepts
+
+Learned about AWS Lambda service and serverless computing architecture.
+
+Topics learned:
+
+Lambda functions
+Triggers
+Automatic scaling
+Timeout concepts
+Event-driven architecture
+
+Purpose:
+
+To understand how AWS runs code automatically without managing servers.
+Lambda Workflow Studied
+
+Trigger/Event → Lambda Function → Output
+
+Triggers explored:
+
+S3 events
+SNS notifications
+API requests
+CloudWatch events
+Revision of Previously Learned AWS Services
+
+Revised previously explored AWS services:
+
+IAM
+S3
+IAM Policies
+RDS
+SNS
+SES
+
+Purpose:
+
+To strengthen AWS cloud fundamentals.
+AWS Console Exploration
+
+Performed practical exploration inside AWS Console.
+
+Activities included:
+
+Exploring service dashboards
+Viewing monitoring sections
+Understanding AWS workflows visually
+
+Purpose:
+
+To improve practical AWS familiarity.
+Learnings
+AWS documentation helps understand real cloud workflows and architecture.
+Video learning improves practical understanding of AWS services.
+AWS Lambda is a serverless compute service that runs code automatically based on triggers.
+CloudWatch is used to monitor AWS services, logs, and execution metrics.
+Continuous learning and documentation are important in DevOps and cloud environments.
+Conclusion
+
+This learning activity helped in improving AWS cloud understanding through documentation reading, video learning, AWS Console exploration, and concept revision. The session strengthened understanding of AWS Lambda, serverless computing, monitoring concepts, and AWS workflows while improving overall AWS learning practices.
