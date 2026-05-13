@@ -1,41 +1,288 @@
-# AWS Account Creation Learning
+# AWS Account Creation and Setup Learning
 
-## Step-by-Step Process
+# Introduction
 
-1. Opened AWS website for account creation.
-2. Entered email ID, password, and account name.
-3. Verified email and phone number.
-4. Selected Personal account type.
-5. Added billing information.
-6. Tried UPI AutoPay for payment verification.
-7. UPI mandate creation failed.
-8. Switched to Visa debit card.
-9. Entered card details and completed OTP verification.
-10. Payment method was successfully submitted for verification.
-11. AWS account setup completed successfully.
+This practical task was performed to understand the AWS account creation process, billing verification requirements, payment setup, Free Tier activation, and AWS account security basics. Different payment verification methods were tested to successfully complete AWS account setup.
 
 ---
 
-# Difficulties Faced
+# Objective
+
+The objectives of this task were:
+
+1. To create an AWS account successfully.
+2. To understand AWS billing verification.
+3. To explore AWS Free Tier setup requirements.
+4. To complete payment verification.
+5. To understand account security and billing precautions.
+6. To learn common problems during AWS account setup.
+
+---
+
+# AWS Services and Features Involved
+
+1. AWS Account Registration
+2. AWS Free Tier
+3. AWS Billing Verification
+4. AWS Payment Methods
+5. AWS Management Console
+6. Billing and Cost Management
+
+---
+
+# Step-by-Step AWS Account Creation Process
+
+## 1. Opened AWS Website
+
+Visited the official AWS website for account registration.
+
+Purpose:
+- To create a new AWS cloud account.
+
+---
+
+## 2. Entered Account Details
+
+Provided required account information:
+
+- Email ID
+- Password
+- AWS account name
+
+Purpose:
+- To create AWS login credentials.
+
+---
+
+## 3. Verified Email Address
+
+AWS sent verification code to registered email.
+
+Activities Performed:
+- Opened email inbox
+- Entered verification code
+- Confirmed email verification
+
+Purpose:
+- To verify account ownership.
+
+---
+
+## 4. Verified Phone Number
+
+Completed phone verification process.
+
+Activities Performed:
+- Entered mobile number
+- Received OTP/verification code
+- Completed phone verification
+
+Purpose:
+- To improve account security.
+
+---
+
+## 5. Selected AWS Account Type
+
+Selected:
+- Personal Account Type
+
+Purpose:
+- To create personal AWS learning account.
+
+---
+
+# Billing Verification Process
+
+## 6. Added Billing Information
+
+Entered billing and payment details required by AWS.
+
+Purpose:
+- AWS requires payment verification even for Free Tier accounts.
+
+---
+
+# Payment Verification Attempts
+
+## 7. Tried UPI AutoPay Verification
+
+Initially attempted payment verification using:
+- UPI AutoPay
+
+Observed Issue:
+- UPI mandate creation failed.
+
+Possible Reasons:
+- Bank restriction
+- Payment gateway issue
+- UPI mandate limitation
+
+---
+
+## 8. Switched to Visa Debit Card
+
+Changed payment method from:
+- UPI AutoPay
+to:
+- Visa Debit Card
+
+Purpose:
+- To complete billing verification successfully.
+
+---
+
+## 9. Completed Debit Card Verification
+
+Performed the following:
+
+1. Entered debit card details.
+2. Completed OTP verification.
+3. Submitted payment verification request.
+
+Result:
+- Payment method verified successfully.
+
+---
+
+# Problems Faced During Setup
+
+Several issues were observed during account creation.
+
+## Problems Faced
 
 1. UPI mandate creation failed.
 2. Debit card verification failed initially.
-3. International transaction issue on debit card.
-4. Confusion regarding billing verification.
+3. International transaction issue occurred.
+4. Billing verification process caused confusion.
 
 ---
 
-# Solutions
+# Solutions Applied
 
-1. Switched from UPI AutoPay to Visa debit card.
-2. Enabled international/online transactions on the card.
-3. Retried payment verification carefully.
+## 1. Switched Payment Method
+
+Changed from:
+- UPI AutoPay
+to:
+- Visa debit card
+
+Result:
+- Verification process improved.
 
 ---
 
-# Learnings
+## 2. Enabled International Transactions
 
-1. AWS requires payment verification even for Free Tier.
-2. International transaction support is important for AWS verification.
-3. Billing alerts are important to avoid unexpected charges.
-4. AWS account setup requires careful payment verification.
+Enabled:
+- International transactions
+- Online transaction support
+
+Purpose:
+- AWS uses international payment processing.
+
+---
+
+## 3. Retried Verification Carefully
+
+Re-entered:
+- Card details
+- OTP verification
+- Billing information
+
+Result:
+- AWS account setup completed successfully.
+
+---
+
+# AWS Free Tier Learning
+
+Learned that AWS provides:
+- Free Tier access
+- Limited free resources
+- Trial usage for learning purposes
+
+Important Observation:
+- AWS still requires payment verification for account activation.
+
+---
+
+# Billing and Security Concepts Learned
+
+## 1. Payment Verification is Mandatory
+
+AWS requires:
+- Valid payment method
+- Billing verification
+- Identity verification
+
+Purpose:
+- Prevent misuse and unauthorized account creation.
+
+---
+
+## 2. International Transactions are Important
+
+Observed that:
+- Some debit cards fail without international transaction support.
+
+Solution:
+- Enable international and online transactions from bank settings.
+
+---
+
+## 3. Billing Alerts are Important
+
+Learned the importance of:
+- Monitoring AWS usage
+- Checking billing dashboard
+- Setting billing alerts
+
+Purpose:
+- To avoid unexpected AWS charges.
+
+---
+
+# AWS Console Access
+
+After successful setup:
+
+Verified:
+- AWS account login
+- Console dashboard access
+- Service visibility
+- Billing section access
+
+---
+
+# Observations
+
+1. AWS account setup requires billing verification.
+
+2. Free Tier accounts still require payment methods.
+
+3. International transaction support is important for AWS payments.
+
+4. Billing setup should be completed carefully.
+
+5. AWS provides Free Tier credits for learning and practice.
+
+---
+
+# Learning Outcome
+
+After completing this task, the following concepts were understood:
+
+1. AWS account creation process.
+2. AWS billing verification system.
+3. Free Tier activation requirements.
+4. Payment verification troubleshooting.
+5. Debit card and UPI verification behavior.
+6. Billing security practices.
+7. AWS account setup best practices.
+
+---
+
+# Conclusion
+
+This practical task helped in understanding AWS account creation, billing verification, and Free Tier setup process. Different payment verification methods were tested to successfully activate the AWS account and understand AWS billing-related concepts.
