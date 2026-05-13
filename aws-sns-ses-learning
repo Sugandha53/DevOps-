@@ -1,0 +1,225 @@
+# AWS SNS and SES Learning
+
+# Introduction
+
+This practical task was performed to understand AWS communication services such as Amazon SNS (Simple Notification Service) and Amazon SES (Simple Email Service). The task included exploring notification systems, email services, messaging workflows, CloudWatch metrics, and AWS communication concepts.
+
+---
+
+# Objective
+
+The objectives of this task were:
+
+1. To understand Amazon SNS service.
+2. To understand Amazon SES service.
+3. To learn notification and messaging workflows.
+4. To explore Topics, Publishers, and Subscribers.
+5. To understand email delivery concepts.
+6. To explore CloudWatch monitoring and metrics.
+
+---
+
+# AWS Services Used
+
+1. Amazon SNS (Simple Notification Service)
+2. Amazon SES (Simple Email Service)
+3. Amazon CloudWatch
+4. AWS Management Console
+
+---
+
+# Amazon SNS Learning
+
+## Introduction to SNS
+
+Amazon SNS is a cloud-based messaging and notification service used to send notifications and messages to multiple subscribers.
+
+Purpose:
+- Message broadcasting
+- Alert notifications
+- SMS and Email notifications
+- Application event messaging
+
+---
+
+## SNS Concepts Learned
+
+### 1. SNS Topics
+
+Topics act as communication channels where messages are published.
+
+Purpose:
+- Deliver messages to multiple subscribers.
+
+---
+
+### 2. Publisher and Subscriber
+
+Publisher:
+- Sends messages to SNS Topics.
+
+Subscriber:
+- Receives messages from SNS Topics.
+
+---
+
+## SNS Workflow
+
+Application → SNS Topic → Subscribers
+
+Purpose:
+- Broadcast notifications to multiple users or services.
+
+---
+
+## SNS Supported Protocols
+
+SNS supports:
+- Email
+- SMS
+- Lambda
+- Amazon SQS
+- HTTP/HTTPS endpoints
+
+---
+
+## SNS Use Cases Studied
+
+1. Email alerts
+2. SMS notifications
+3. Cloud monitoring alerts
+4. Application event notifications
+
+---
+
+## SNS Metrics and Monitoring
+
+Explored SNS monitoring using:
+- Amazon CloudWatch
+
+Metrics observed:
+- Messages Published
+- Notification Deliveries
+- Failed Deliveries
+
+Purpose:
+- To monitor SNS notification performance.
+
+---
+
+# Amazon SES Learning
+
+## Introduction to SES
+
+Amazon SES is a cloud-based email service used for sending transactional and marketing emails.
+
+Purpose:
+- Email communication
+- Verification emails
+- Notification emails
+- Marketing emails
+
+---
+
+## SES Concepts Learned
+
+### 1. Email Delivery Workflow
+
+SES helps applications send emails directly to users.
+
+Workflow:
+Application → SES → User Email Inbox
+
+---
+
+### 2. Email Verification
+
+Learned about:
+- Verified email identities
+- Domain verification
+- Secure email sending
+
+---
+
+## SES Use Cases Studied
+
+1. OTP emails
+2. Password reset emails
+3. Verification emails
+4. Order confirmation emails
+5. Marketing emails
+
+---
+
+## SES Metrics and Monitoring
+
+Explored SES monitoring using:
+- Amazon CloudWatch
+
+Metrics studied:
+- Email Deliveries
+- Bounces
+- Complaints
+- Rejected Emails
+
+Purpose:
+- To monitor email performance and reputation.
+
+---
+
+# Difference Between SNS and SES
+
+| SNS | SES |
+|-----|-----|
+| Notification service | Email service |
+| Supports SMS and notifications | Supports email sending |
+| Uses Topics and Subscribers | Uses Email Identities |
+| Message broadcasting | Email communication |
+| Alerts and event messaging | Transactional and marketing emails |
+
+---
+
+# CloudWatch Learning
+
+Learned that Amazon CloudWatch is used to monitor:
+- SNS metrics
+- SES metrics
+- Delivery status
+- Failures and usage statistics
+
+Purpose:
+- To analyze AWS service performance using graphs and metrics.
+
+---
+
+# Observations
+
+1. SNS is used for notifications and broadcasting.
+
+2. SES is used for professional email communication.
+
+3. CloudWatch helps monitor service performance.
+
+4. SNS and SES are important AWS communication services.
+
+5. AWS messaging services support scalable communication systems.
+
+---
+
+# Learning Outcome
+
+After completing this task, the following concepts were understood:
+
+1. Amazon SNS basics.
+2. Amazon SES basics.
+3. Notification and email workflows.
+4. Topics, Publishers, and Subscribers.
+5. Email delivery concepts.
+6. CloudWatch monitoring and metrics.
+7. AWS communication services.
+
+---
+
+# Conclusion
+
+This practical task helped in understanding Amazon SNS and Amazon SES services, notification systems, messaging workflows, and AWS communication concepts. The implementation improved practical understanding of AWS-based messaging and email communication services.
