@@ -22,6 +22,10 @@
 18. Explored Amazon SNS Topics, Publishers, and Subscribers.
 19. Studied SNS notification workflow and CloudWatch metrics.
 20. Explored Amazon SES email service and email delivery workflow.
+21. Studied AWS Lambda concepts through documentation and learning videos.
+22. Explored AWS API Gateway, API communication workflows, and different API types.
+23. Studied AWS Lambda concepts through documentation and learning videos.
+24. Explored AWS API Gateway, REST API, HTTP API, WebSocket API, and API communication concepts.
 
 
 
