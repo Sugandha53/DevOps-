@@ -1,0 +1,326 @@
+AWS API Gateway Learning
+Introduction
+
+This learning activity was performed to understand AWS API Gateway concepts, API communication workflows, API types, and serverless API architecture. The session included AWS documentation reading, video learning, and concept exploration to understand how frontend applications communicate with backend services using APIs.
+
+The learning mainly focused on understanding REST API, HTTP API, WebSocket API, request-response workflows, API security, traffic management, monitoring concepts, and AWS API Gateway integration with backend services such as AWS Lambda.
+
+Objective
+
+The objectives of this learning session were:
+
+To understand AWS API Gateway service and architecture.
+To learn API communication and request-response workflows.
+To understand REST API, HTTP API, and WebSocket API concepts.
+To explore API Gateway integration with backend services.
+To study API security, rate limiting, throttling, and monitoring concepts.
+To improve understanding through AWS documentation and learning videos.
+To strengthen cloud and serverless architecture concepts.
+Learning Activities Performed
+1. Studied AWS Documentation
+
+Read AWS-related documentation to understand official API Gateway architecture, workflows, and API communication concepts.
+
+Topics explored:
+
+AWS API Gateway
+REST API
+HTTP API
+WebSocket API
+API routing
+API security
+API monitoring
+CloudWatch logging
+
+Purpose:
+
+To understand AWS API management concepts using official documentation.
+2. Watched Learning Videos
+
+Studied AWS API Gateway concepts through learning videos and tutorials.
+
+Topics covered:
+
+API communication workflow
+Frontend and backend interaction
+REST API vs HTTP API
+WebSocket API concepts
+Serverless architecture
+API Gateway and Lambda integration
+
+Purpose:
+
+To improve visual and practical understanding of API workflows and cloud communication systems.
+3. Explored API Gateway Architecture
+
+Learned how API Gateway works as a middle layer between frontend applications and backend services.
+
+Workflow studied:
+
+Frontend → API Gateway → Backend Service → Response
+
+Purpose:
+
+To understand request handling and API routing architecture.
+API Communication Concepts Learned
+What is an API
+
+An API (Application Programming Interface) is a communication mechanism that allows applications and services to exchange data and functionality.
+
+Examples:
+
+Login APIs
+Payment APIs
+Product APIs
+User profile APIs
+
+Purpose:
+
+To enable communication between frontend and backend systems.
+What is API Gateway
+
+AWS API Gateway is a managed AWS service used to create, manage, secure, monitor, and route APIs.
+
+Purpose:
+
+Request routing
+API security
+Monitoring
+Traffic management
+Backend integration
+API Types Learned
+1. REST API
+
+REST API is a feature-rich API type used for enterprise and complex backend systems.
+
+Features Studied
+API Keys
+Request Validation
+Usage Plans
+Advanced Security
+Caching
+Throttling
+Concepts Learned
+API Keys
+
+Used to identify and control API usage.
+
+Purpose:
+
+Security
+Usage tracking
+Access control
+Request Validation
+
+Checks whether request data is valid before sending to backend services.
+
+Purpose:
+
+Prevent invalid requests
+Improve backend security
+Usage Plans
+
+Controls API request limits for users.
+
+Purpose:
+
+Resource management
+API monetization
+Traffic control
+Advanced Security
+
+Supports:
+
+IAM Authentication
+OAuth
+Cognito
+Custom Authorizers
+
+Purpose:
+
+Enterprise-level API security
+Caching
+
+Stores frequently requested responses temporarily.
+
+Purpose:
+
+Faster response
+Reduced backend load
+Improved performance
+Throttling
+
+Controls request speed and traffic flow.
+
+Purpose:
+
+Prevent overload
+Protect backend services
+Purpose of REST API
+
+Used for:
+
+Enterprise systems
+Banking applications
+Large-scale backend architectures
+Complex cloud systems
+2. HTTP API
+
+HTTP API is a lightweight and simplified API type mainly used for serverless and modern cloud applications.
+
+Features Studied
+Simple Routing
+Lambda Integration
+JWT Authentication
+Lower Latency
+Concepts Learned
+Simple Routing
+
+Routes requests to correct backend services.
+
+Example:
+
+/login → Login Service
+/products → Product Service
+Lambda Integration
+
+HTTP APIs integrate efficiently with AWS Lambda.
+
+Workflow:
+User Request → HTTP API → Lambda → Response
+
+Purpose:
+
+Serverless architecture
+JWT Authentication
+
+JWT (JSON Web Token) is used for secure authentication and authorization.
+
+Purpose:
+
+User authentication
+Secure API access
+Lower Latency
+
+HTTP APIs provide faster responses because of lightweight architecture.
+
+Purpose:
+
+Faster execution
+Reduced cost
+Improved performance
+Purpose of HTTP API
+
+Used for:
+
+Serverless applications
+Lightweight APIs
+Lambda-based backend systems
+Modern cloud-native applications
+3. WebSocket API
+
+WebSocket API supports real-time two-way communication between client and server.
+
+Concepts Learned
+
+Unlike REST and HTTP APIs:
+
+WebSocket keeps connection continuously active.
+Both client and server can send data anytime.
+
+Purpose:
+
+Real-time communication systems
+Use Cases Studied
+Chat applications
+Live notifications
+Online gaming
+Real-time dashboards
+Stock market applications
+API Gateway and Backend Integration
+
+Studied how API Gateway integrates with:
+
+AWS Lambda
+Backend APIs
+Cloud services
+
+Purpose:
+
+To understand serverless API architecture.
+Rate Limiting and Throttling
+Rate Limiting
+
+Controls:
+
+Number of requests allowed in a time period
+
+Purpose:
+
+Prevent API abuse
+Protect backend systems
+Throttling
+
+Controls:
+
+Speed of incoming requests during high traffic
+
+Purpose:
+
+Avoid server overload
+Improve application stability
+CloudWatch Logging and Monitoring
+
+Learned how CloudWatch is used for:
+
+API monitoring
+Error tracking
+Request logging
+Performance analysis
+
+Metrics explored:
+
+API request count
+Error rates
+Latency
+Throttling events
+
+Purpose:
+
+To monitor API performance and troubleshoot issues.
+Frontend and Backend Communication Understanding
+
+Learned how:
+
+Frontend applications send API requests.
+API Gateway manages requests.
+Backend services process requests.
+Responses return to frontend applications.
+
+Example Workflow:
+Frontend App → API Gateway → Backend → Database → Response
+
+Learnings
+API Gateway acts as a bridge between frontend and backend systems.
+REST API is feature-rich and suitable for enterprise applications.
+HTTP API is lightweight, faster, and ideal for serverless systems.
+WebSocket API supports real-time communication.
+Rate limiting and throttling help manage API traffic efficiently.
+CloudWatch is used for monitoring API logs, errors, and performance metrics.
+Documentation and video learning improve understanding of cloud architecture and API workflows.
+AWS API Gateway simplifies API management, security, and monitoring.
+Overall Learning Outcome
+
+After completing this learning session, the following concepts were understood:
+
+AWS API Gateway architecture.
+API request-response workflow.
+REST API, HTTP API, and WebSocket API concepts.
+API Gateway integration with backend services.
+Serverless API architecture.
+API security and monitoring concepts.
+CloudWatch logging and performance monitoring.
+Frontend and backend communication workflows.
+Conclusion
+
+This learning activity helped in understanding AWS API Gateway concepts, API communication workflows, API types, monitoring systems, traffic management, serverless architecture, and frontend-backend integration through documentation reading, video learning, and concept exploration. The session strengthened understanding of cloud API management and AWS serverless communication architecture.
