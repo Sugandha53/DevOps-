@@ -1,0 +1,294 @@
+Today I completed one of the most detailed and practical hands-on learning sessions on AWS Serverless Architecture, API Gateway, Lambda, and API Testing.
+
+Started the day with understanding how backend communication actually works in cloud applications and gradually implemented all three major API types available in AWS API Gateway:
+
+✅ HTTP API
+✅ REST API
+✅ WebSocket API
+
+along with AWS Lambda integration and Postman testing.
+
+━━━━━━━━━━━━━━━━━━━━━━
+AWS LAMBDA IMPLEMENTATION
+━━━━━━━━━━━━━━━━━━━━━━
+
+Started by creating a Lambda function in AWS Lambda using Python runtime.
+
+Explored:
+• Function creation workflow
+• Runtime configuration
+• IAM execution roles
+• Code source section
+• Deployments
+• Monitoring
+• CloudWatch integration
+• Test events
+
+Implemented Python code returning custom API responses.
+
+Initial implementation:
+
+```python id="b74r2m"
+def lambda_handler(event, context):
+    return {
+        'statusCode': 200,
+        'body': 'Hello from Lambda'
+    }
+```
+
+Learned:
+• How Lambda works as backend logic
+• How event-driven architecture works
+• Difference between request and response objects
+• How Lambda returns HTTP responses
+• Why statusCode 200 represents successful execution
+
+Created and executed Lambda test events and analyzed:
+• START RequestId
+• END RequestId
+• REPORT logs
+• Duration
+• Billed duration
+• Memory utilization
+• Execution success status
+
+Understood complete Lambda execution workflow internally.
+
+━━━━━━━━━━━━━━━━━━━━━━
+HTTP API IMPLEMENTATION
+━━━━━━━━━━━━━━━━━━━━━━
+
+Then moved to AWS API Gateway and implemented HTTP API.
+
+Learned:
+• Why API Gateway is needed
+• Why Lambda alone is not publicly accessible
+• How API Gateway exposes backend services externally
+• Difference between frontend, backend, and servers
+• Relationship between API Gateway and Lambda
+
+Created:
+GET /hello route
+
+Integrated it with Lambda and understood:
+• Integrations
+• Routes
+• Route handling
+• API deployments
+• Invoke URLs
+• Auto-deploy functionality
+• API stages
+
+Generated API endpoint and tested successfully through:
+• Browser
+• Postman
+
+Successfully received:
+
+```json id="2fq6wp"
+{
+  "statusCode": 200,
+  "body": "Hello from Lambda"
+}
+```
+
+Understood complete architecture:
+Browser/Postman → API Gateway → Lambda → Response
+
+Also explored:
+• API keys
+• Throttling
+• Rate limiting
+• CloudWatch logging
+• Difference between HTTP API and REST API
+• HTTP methods like GET
+
+━━━━━━━━━━━━━━━━━━━━━━
+MODIFICATION TASK
+━━━━━━━━━━━━━━━━━━━━━━
+
+Performed a separate practical modification task.
+
+Created another Lambda function and modified API response from:
+“Hello from Lambda”
+to:
+“Hi, this is Sugandha”
+
+Learned:
+• Multiple Lambda handling
+• Separate stage deployment
+• Environment separation
+• Stage concepts in API Gateway
+• Difference between stages and routes
+• How deployment stages manage API versions
+
+Faced multiple issues during deployment and integration process and resolved:
+• Incorrect Lambda runtime selection
+• Runtime confusion between Node.js and Python
+• Deployment synchronization issues
+• Wrong integration mapping
+• Route-stage mismatch
+• Missing stage deployment issues
+
+Successfully fixed all integration and deployment problems manually.
+
+━━━━━━━━━━━━━━━━━━━━━━
+REST API IMPLEMENTATION
+━━━━━━━━━━━━━━━━━━━━━━
+
+After HTTP API, implemented REST API separately to understand enterprise-level API architecture.
+
+Learned practical differences between:
+• HTTP API
+• REST API
+
+Explored:
+• Resources
+• Methods
+• Integration Requests
+• Method Execution
+• Stage Deployments
+• Regional endpoint configuration
+
+Created:
+• Resource → /hello
+• GET method
+• Lambda integration
+
+Integrated Lambda function with REST API and deployed to stage:
+
+```text id="3tt4rp"
+test
+```
+
+Faced several real-world issues during REST API setup:
+• Resource selection confusion
+• Wrong method attachment
+• Stage deployment mismatch
+• Not Found route errors
+• Incorrect Lambda mapping
+• Deployment stage visibility issues
+
+Debugged each issue step by step and finally achieved successful deployment and testing.
+
+Successfully tested REST API using:
+• Browser
+• Postman
+
+Understood how REST API internally processes:
+Client Request → API Gateway → Integration Request → Lambda → Response
+
+━━━━━━━━━━━━━━━━━━━━━━
+WEBSOCKET API IMPLEMENTATION
+━━━━━━━━━━━━━━━━━━━━━━
+
+Finally explored WebSocket API for realtime communication systems.
+
+Learned the major conceptual difference:
+
+REST/HTTP:
+Request → Response → Connection Closed
+
+WebSocket:
+Persistent realtime bidirectional connection
+
+Explored practical use cases:
+• Chat applications
+• Live notifications
+• Multiplayer games
+• Live dashboards
+• Real-time tracking systems
+
+Created WebSocket API and configured:
+• `$connect`
+• `$disconnect`
+• `$default`
+
+Integrated all routes with Lambda function.
+
+Learned:
+• Route selection expression
+• Persistent connections
+• Stateful communication
+• Difference between REST and WebSocket workflows
+• Real-time event handling
+
+Generated WebSocket endpoint:
+
+```text id="vh7s3n"
+wss://
+```
+
+and tested realtime communication using Postman WebSocket client.
+
+Successfully:
+• Established WebSocket connection
+• Sent realtime messages
+• Triggered Lambda from WebSocket events
+• Tested live event flow
+
+Explored practical meaning of:
+• `$connect`
+• `$disconnect`
+• `$default`
+
+and understood how API Gateway handles realtime connections internally.
+
+━━━━━━━━━━━━━━━━━━━━━━
+POSTMAN TESTING
+━━━━━━━━━━━━━━━━━━━━━━
+
+Used Postman extensively for:
+• HTTP request testing
+• REST API validation
+• WebSocket testing
+• API debugging
+• Response verification
+• Real-time communication testing
+
+Understood why Postman acts as:
+• API client
+• API testing tool
+• Backend testing simulator
+
+━━━━━━━━━━━━━━━━━━━━━━
+CORE CONCEPTS LEARNED
+━━━━━━━━━━━━━━━━━━━━━━
+
+• AWS Lambda Architecture
+• Serverless Backend Systems
+• API Gateway Integrations
+• HTTP APIs
+• REST APIs
+• WebSocket APIs
+• API Routes & Resources
+• API Stages & Deployments
+• Lambda Execution Flow
+• Realtime Communication
+• Postman API Testing
+• Browser vs API Client Testing
+• Route Handling
+• CloudWatch Logs
+• Request/Response Lifecycle
+• API Gateway Workflow
+• Integration Requests
+• Persistent Connections in WebSockets
+
+━━━━━━━━━━━━━━━━━━━━━━
+SERVICES & TOOLS USED
+━━━━━━━━━━━━━━━━━━━━━━
+
+☁️ AWS Lambda
+☁️ AWS API Gateway
+☁️ HTTP API
+☁️ REST API
+☁️ WebSocket API
+☁️ CloudWatch Logs
+☁️ IAM Roles
+☁️ Postman
+☁️ Python
+☁️ Serverless Architecture
+
+One of the most practical cloud learning sessions so far — filled with implementation, debugging, testing, deployment issues, and real-world backend workflow understanding 🚀☁️
+
+#AWS #Lambda #APIGateway #RESTAPI #HTTPAPI #WebSocket #CloudComputing #Serverless #Postman #Python #BackendDevelopment #DevOps #LearningJourney #CloudArchitecture
