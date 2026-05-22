@@ -1,0 +1,284 @@
+AWS Systems Manager (SSM)
+
+Introduction:
+AWS Systems Manager (SSM) is a management service provided by Amazon Web Services that helps administrators manage AWS infrastructure securely and efficiently. It allows users to automate operational tasks, manage servers remotely, maintain configuration consistency, monitor managed nodes, and improve infrastructure security.
+
+During this exploration, multiple AWS Systems Manager features were studied along with their compatibility and integration with other AWS services such as EC2, IAM, CloudWatch, SNS, S3, and Lambda.
+
+---
+
+1. Session Manager
+
+Overview:
+Session Manager is a secure management feature in AWS Systems Manager that allows administrators to connect to EC2 instances directly from the AWS Console without using SSH keys or opening inbound ports.
+
+Key Learnings:
+
+* Secure browser-based access to Linux and Windows instances.
+* No requirement for SSH key management.
+* No need to open port 22 in security groups.
+* Supports centralized access control using IAM.
+* Session activities can be logged and monitored.
+
+Advantages:
+
+* Improves infrastructure security.
+* Reduces exposure of public IP addresses.
+* Simplifies server access management.
+* Provides auditing and monitoring support.
+
+Service Compatibility:
+
+* EC2 → Used for secure instance access.
+* IAM → Controls user permissions.
+* CloudWatch → Stores session logs and monitoring information.
+* S3 → Stores session history and logs.
+
+---
+
+2. Run Command
+
+Overview:
+Run Command allows administrators to remotely execute commands and scripts on one or multiple managed EC2 instances without manually connecting to each server.
+
+Key Learnings:
+
+* Executes commands remotely using SSM Agent.
+* Supports command automation across multiple servers.
+* Uses command documents for predefined operations.
+* Supports target selection using instance IDs or tags.
+
+Examples:
+
+* Checking disk usage.
+* Installing software packages.
+* Restarting services.
+* Running shell scripts.
+
+Advantages:
+
+* Reduces manual administrative effort.
+* Enables centralized server management.
+* Supports large-scale infrastructure operations.
+* Simplifies automation tasks.
+
+Service Compatibility:
+
+* EC2 → Target managed nodes.
+* IAM → Permission management.
+* S3 → Stores command outputs and logs.
+* SNS → Sends command execution notifications.
+* CloudWatch → Monitors execution logs.
+
+---
+
+3. Parameter Store
+
+Overview:
+Parameter Store is used to securely store configuration values, application settings, passwords, API keys, and environment variables.
+
+Parameter Types Explored:
+
+1. String
+2. StringList
+3. SecureString
+
+Key Learnings:
+
+* SecureString encrypts sensitive values using AWS KMS.
+* Helps avoid hardcoding secrets inside application code.
+* Centralized configuration management.
+
+Examples:
+
+* Database passwords.
+* API keys.
+* Application environment variables.
+* Application URLs.
+
+Advantages:
+
+* Improves security.
+* Simplifies configuration management.
+* Supports centralized secret storage.
+* Easy integration with applications.
+
+Service Compatibility:
+
+* Lambda → Fetch configuration values.
+* EC2 → Retrieve environment settings.
+* IAM → Controls access permissions.
+* KMS → Encrypts sensitive data.
+
+---
+
+4. Patch Manager
+
+Overview:
+Patch Manager automates operating system updates and security patching for managed nodes.
+
+Key Learnings:
+
+* Automates patch installation.
+* Helps maintain infrastructure security.
+* Supports patch baselines and patch policies.
+* Reduces manual maintenance effort.
+
+Examples:
+
+* Updating Linux packages.
+* Installing Windows security updates.
+* Applying operating system fixes.
+
+Advantages:
+
+* Improves security compliance.
+* Reduces vulnerability risks.
+* Simplifies maintenance operations.
+* Supports scheduled patching.
+
+Service Compatibility:
+
+* EC2 → Patch target instances.
+* IAM → Access permissions.
+* CloudWatch → Monitoring and logs.
+* Maintenance Windows → Scheduled patching operations.
+
+---
+
+5. Automation
+
+Overview:
+Automation helps execute operational workflows automatically without manual intervention.
+
+Key Learnings:
+
+* Automates repetitive infrastructure tasks.
+* Supports operational workflows.
+* Helps reduce human errors.
+* Supports auto-remediation processes.
+
+Examples:
+
+* Restarting EC2 instances.
+* Creating AMIs.
+* Running maintenance operations.
+* Performing automated remediation.
+
+Advantages:
+
+* Saves operational time.
+* Improves consistency.
+* Reduces manual effort.
+* Enhances infrastructure reliability.
+
+Service Compatibility:
+
+* EC2 → Infrastructure automation.
+* Lambda → Event-driven workflows.
+* SNS → Notifications and alerts.
+* IAM → Workflow permissions.
+* CloudWatch → Monitoring triggers.
+
+---
+
+6. Fleet Manager
+
+Overview:
+Fleet Manager provides centralized management and monitoring of managed nodes from a single dashboard.
+
+Key Learnings:
+
+* View multiple managed instances centrally.
+* Monitor system information and processes.
+* Simplifies infrastructure troubleshooting.
+* Supports centralized operations management.
+
+Features Explored:
+
+* Node information.
+* Process management.
+* File system visibility.
+* Performance monitoring.
+
+Advantages:
+
+* Centralized infrastructure visibility.
+* Easier troubleshooting.
+* Simplifies server management.
+* Improves operational efficiency.
+
+Service Compatibility:
+
+* EC2 → Managed servers.
+* CloudWatch → Monitoring metrics.
+* IAM → Access permissions.
+* S3 → Log and file storage.
+
+---
+
+7. State Manager
+
+Overview:
+State Manager helps maintain desired configurations across managed nodes automatically.
+
+Key Learnings:
+
+* Maintains operational consistency.
+* Detects and fixes configuration drift.
+* Ensures required software and services remain configured properly.
+
+Examples:
+
+* Keeping Docker installed.
+* Maintaining monitoring agents.
+* Ensuring required services remain active.
+
+Advantages:
+
+* Improves consistency across servers.
+* Reduces configuration drift.
+* Supports automated compliance.
+* Simplifies infrastructure maintenance.
+
+Service Compatibility:
+
+* EC2 → Managed nodes.
+* IAM → Permission control.
+* Automation → Auto-remediation support.
+* CloudWatch → Monitoring integration.
+
+---
+
+Managed Nodes
+
+Definition:
+Managed nodes are EC2 instances or servers configured to communicate with AWS Systems Manager using SSM Agent and IAM permissions.
+
+Requirements:
+
+* SSM Agent installed.
+* IAM Role attached.
+* Network connectivity available.
+
+Importance:
+
+* Required for Session Manager.
+* Required for Run Command.
+* Required for Patch Manager.
+* Required for Automation workflows.
+
+---
+
+Overall Learning Outcome
+
+Through this exploration, understanding was developed regarding:
+
+* Secure infrastructure management.
+* Centralized server operations.
+* Infrastructure automation.
+* Patch and configuration management.
+* Secure parameter and secret storage.
+* Integration between SSM and AWS services.
+
+The study also helped in understanding how AWS Systems Manager improves operational efficiency, security, monitoring, automation, and infrastructure management in cloud environments.
