@@ -1,0 +1,112 @@
+AWS Lambda and CloudWatch Integration Task
+
+Objective:
+The objective of this task was to understand how AWS Lambda works with Amazon CloudWatch for backend execution monitoring and logging.
+
+Services Used:
+• AWS Lambda
+• Amazon CloudWatch
+• Node.js Runtime
+
+STEP 1: Created AWS Lambda Function
+
+Opened AWS Lambda Console.
+Created a new Lambda function.
+Selected Node.js runtime.
+Configured the Lambda environment.
+Created the function successfully.
+
+Learning:
+AWS Lambda is a serverless compute service used to execute backend code without managing servers.
+
+STEP 2: Added Lambda Code
+
+Added Node.js code inside the Lambda function.
+Created a variable to store a value.
+Used console.log() to print output.
+Added response handling using statusCode and body.
+Deployed the Lambda code successfully.
+
+Learning:
+Lambda executes backend logic and console.log() is used for logging and debugging.
+
+STEP 3: Tested Lambda Function
+
+Created a test event.
+Executed the Lambda function using the Test option.
+Initially received a runtime/module error.
+Reviewed execution logs for debugging.
+Identified syntax issue related to ES module configuration.
+
+Error Observed:
+exports is not defined in ES module scope
+
+Learning:
+Cloud applications often require debugging and log analysis during development.
+
+STEP 4: Debugged and Fixed the Error
+
+Modified the export syntax in the code.
+Updated CommonJS syntax to ES module syntax.
+Redeployed the corrected code.
+Re-executed the Lambda function.
+Verified successful execution.
+
+Learning:
+Correct runtime syntax is required for successful Lambda execution.
+
+STEP 5: Successful Lambda Execution
+
+Lambda function executed successfully.
+Received successful HTTP response.
+Verified statusCode 200 response.
+Verified returned output value.
+Confirmed successful backend execution.
+
+Successful Response:
+
+{
+"statusCode": 200,
+"body": ""Hello from AWS Lambda""
+}
+
+Learning:
+StatusCode 200 confirms successful execution of the Lambda function.
+
+STEP 6: Verified CloudWatch Logs
+
+Opened the Monitor tab in AWS Lambda.
+Accessed CloudWatch Logs.
+Opened the latest log stream.
+Verified console log output.
+Checked Lambda execution details.
+
+Verified Output:
+INFO Fetched Value: Hello from AWS Lambda
+
+Learning:
+Amazon CloudWatch automatically stores Lambda execution logs for monitoring and troubleshooting.
+
+Integration Understanding
+
+Service                     Purpose
+
+AWS Lambda             Executes backend/serverless code
+CloudWatch             Stores logs and monitoring data
+IAM                     Controls permissions and access
+Node.js Runtime         Executes JavaScript backend code
+
+Main Purpose of the Task
+
+The primary objective of this task was to understand:
+
+• Serverless backend execution
+• Lambda function testing
+• Error debugging
+• Console log monitoring
+• CloudWatch integration with Lambda
+• Backend monitoring workflow
+
+Final Outcome
+
+Successfully created, executed, debugged, and monitored an AWS Lambda function using Amazon CloudWatch logs.
