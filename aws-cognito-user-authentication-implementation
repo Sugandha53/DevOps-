@@ -1,0 +1,229 @@
+AWS Cognito User Authentication Implementation
+
+Project Objective:
+The objective of this task was to learn and implement user authentication using AWS Cognito with email and phone number verification.
+
+Services Used:
+- AWS Cognito
+- AWS SNS (Simple Notification Service)
+- AWS Support Center
+
+Features Implemented:
+- User Registration (Sign Up)
+- User Login (Sign In)
+- Email Verification
+- Phone Number Integration
+- OTP Authentication Setup
+- Cognito User Pool Configuration
+
+==================================================
+STEP 1: AWS Account Setup
+==================================================
+
+1. Created and logged into AWS account
+2. Opened AWS Management Console
+3. Selected region:
+   - us-east-1 (N. Virginia)
+
+Learning:
+AWS services are region-specific, and Cognito SMS configurations depend on the selected region.
+
+==================================================
+STEP 2: AWS Cognito User Pool Creation
+==================================================
+
+1. Opened AWS Cognito service
+2. Navigated to:
+   Cognito → User Pools
+3. Clicked:
+   Create User Pool
+4. Configured authentication provider
+5. Enabled:
+   - Email
+   - Phone Number
+6. Configured password policy
+7. Configured sign-up experience
+8. Configured sign-in options
+9. Created the user pool successfully
+
+Learning:
+AWS Cognito User Pool is used to manage authentication and user identities.
+
+==================================================
+STEP 3: Application Client Configuration
+==================================================
+
+1. Created App Client inside User Pool
+2. Configured authentication flow
+3. Enabled user sign-up and sign-in
+4. Integrated frontend application with Cognito
+
+Learning:
+App Client connects the frontend application with Cognito authentication services.
+
+==================================================
+STEP 4: User Registration Implementation
+==================================================
+
+1. Added registration form fields:
+   - Email
+   - Phone Number
+   - Password
+
+2. Implemented Sign Up functionality
+3. Sent user data to Cognito User Pool
+4. User creation completed successfully
+
+Result:
+User account was created successfully inside AWS Cognito.
+
+Learning:
+Cognito automatically stores user attributes inside the User Pool.
+
+==================================================
+STEP 5: User Sign In Implementation
+==================================================
+
+1. Implemented Sign In form
+2. Added:
+   - Email/Login field
+   - Password field
+3. Connected login flow with Cognito
+4. Tested authentication successfully
+
+Result:
+User login was working correctly.
+
+Learning:
+AWS Cognito handles secure authentication and session management.
+
+==================================================
+STEP 6: Email Verification
+==================================================
+
+1. Configured email verification
+2. Verification email was sent successfully
+3. Verified user email
+4. Cognito updated email status as:
+   Verified
+
+Result:
+Email verification completed successfully.
+
+Learning:
+Cognito supports automatic email verification workflows.
+
+==================================================
+STEP 7: Phone Number Verification Setup
+==================================================
+
+1. Added phone_number attribute
+2. Configured OTP verification
+3. Integrated AWS SNS dependency for SMS OTP delivery
+
+Expected Result:
+User should receive OTP on phone number.
+
+Actual Result:
+SMS OTP was not delivered.
+
+==================================================
+STEP 8: Issue Faced During SMS OTP Verification
+==================================================
+
+Problem:
+Indian phone numbers were not receiving OTP messages.
+
+Errors Observed:
+- SMS delivery failed
+- PinpointSmsVoiceV2 related errors
+- SNS sandbox-related restrictions
+- Delivery rate showed 0% for India
+
+SNS Dashboard Errors:
+- "The AWS Access Key Id needs a subscription for the service"
+- "AWS can't determine whether your account is in the SMS sandbox"
+
+Impact:
+Phone number verification remained incomplete.
+
+==================================================
+STEP 9: Troubleshooting Performed
+==================================================
+
+The following troubleshooting steps were performed:
+
+1. Opened Amazon SNS Console
+2. Navigated to:
+   Text Messaging (SMS)
+3. Checked SMS delivery statistics
+4. Verified AWS region configuration
+5. Checked Cognito authentication methods
+6. Attempted OTP verification multiple times
+7. Verified user manually from Cognito console
+8. Investigated SMS sandbox configuration
+9. Checked delivery logs and preferences
+
+Learning:
+AWS Cognito depends on SNS/End User Messaging services for SMS OTP delivery.
+
+==================================================
+STEP 10: AWS Support Case Creation
+==================================================
+
+1. Opened AWS Support Center
+2. Created new support case
+3. Added issue description
+4. Explained SMS OTP failure issue
+5. Mentioned Cognito and SNS errors
+6. Requested SMS access / sandbox removal
+7. Submitted support request successfully
+
+Support Case Purpose:
+To enable low-volume SMS OTP testing for learning purposes.
+
+==================================================
+CURRENT PROJECT STATUS
+==================================================
+
+Completed Successfully:
+- AWS Cognito setup
+- User Pool creation
+- User registration
+- User sign in
+- Email verification
+- Authentication flow implementation
+
+Pending:
+- Phone OTP verification
+
+Reason:
+AWS SNS SMS access issue / sandbox restriction for Indian phone numbers.
+
+==================================================
+LEARNING OUTCOMES
+==================================================
+
+Through this implementation, the following concepts were learned:
+
+- AWS Cognito User Pool
+- Authentication Flow
+- User Registration
+- User Login
+- Email Verification
+- Phone Number Verification
+- OTP Authentication
+- AWS SNS Integration
+- SMS Sandbox Restrictions
+- AWS Support Case Handling
+- Cognito User Attribute Management
+
+==================================================
+CONCLUSION
+==================================================
+
+AWS Cognito authentication using email verification was implemented successfully.
+
+Phone OTP verification could not be completed because AWS SNS SMS services for Indian phone numbers were restricted due to sandbox/service access limitations.
+
+An AWS Support case has been raised to resolve the SMS OTP issue for further testing and learning.
