@@ -1,0 +1,363 @@
+AWS S3 Static Website Hosting Documentation
+
+Task Assigned by Mentor
+
+Task Objective:
+Upload an HTML file into an Amazon S3 bucket, configure static website hosting, make the website publicly accessible, and verify successful hosting through the S3 website endpoint.
+
+---
+
+Project Objective
+
+The objective of this task was to understand how Amazon S3 can be used for static website hosting by uploading an HTML file, configuring public access permissions, enabling website hosting, and verifying hosted website accessibility through a browser.
+
+This task also helped in understanding cloud-based website hosting without managing a server.
+
+---
+
+Services and Technologies Used
+
+• Amazon S3
+• HTML
+• AWS Management Console
+• Static Website Hosting
+• Bucket Policy (JSON)
+
+---
+
+Project Workflow
+
+HTML File Creation
+↓
+Amazon S3 Bucket Creation
+↓
+Upload HTML File to Bucket
+↓
+Enable Static Website Hosting
+↓
+Configure Public Access Permission
+↓
+Generate Website Endpoint
+↓
+Verify Website Hosting in Browser
+
+---
+
+STEP 1: Understanding the Task Requirement
+
+Task Understanding:
+
+The mentor assigned the task to host an HTML webpage inside Amazon S3 and make it publicly accessible.
+
+Before implementation, the following understanding was developed:
+
+• HTML file would act as webpage content
+• Amazon S3 bucket would store website files
+• Static Website Hosting would allow S3 to behave like a website host
+• Bucket permissions would make the website publicly accessible
+• Website endpoint would be used to open the hosted webpage
+
+Learning:
+
+Understood that Amazon S3 can host static websites without requiring a traditional web server.
+
+---
+
+STEP 2: HTML File Creation
+
+Implementation:
+
+Initially, confusion occurred regarding creation of an HTML file because a text editor such as Notepad was not readily used.
+
+Questions/Confusion Faced:
+• How to create an HTML file?
+• Which software should be used?
+• How to save the file in .html format?
+• Difference between .txt and .html extension?
+
+Resolution:
+
+Instead of Notepad, an available editor option was explored and a text-based file was created.
+
+A simple webpage structure was written using HTML.
+
+Example webpage content included:
+
+• Website title
+• Heading text
+• Paragraph text
+
+File name created:
+
+index.html
+
+Verification Performed:
+
+The file extension was verified to ensure that the created file was:
+
+.html
+
+and not:
+
+.txt
+
+Reason for Verification:
+
+A .txt file would not work as a webpage during hosting.
+
+Learning:
+
+HTML files are used to create webpage content and browsers render .html files as websites.
+
+---
+
+STEP 3: Amazon S3 Bucket Creation
+
+Implementation:
+
+1. Logged into AWS Console.
+2. Opened Amazon S3 service.
+3. Clicked “Create Bucket”.
+4. Entered unique bucket name.
+5. Selected default configuration.
+6. Created bucket successfully.
+
+Understanding:
+
+An Amazon S3 bucket works as cloud storage where files are stored.
+
+Simple Understanding:
+
+Bucket = Cloud Folder
+
+Purpose:
+
+The bucket would store website files for hosting.
+
+Learning:
+
+Amazon S3 stores files such as:
+• HTML
+• Images
+• CSS
+• Documents
+• Videos
+
+---
+
+STEP 4: Public Access Configuration
+
+Implementation:
+
+During bucket configuration, “Block Public Access” settings were reviewed.
+
+Action Performed:
+
+Disabled:
+
+“Block all public access”
+
+Acknowledgment confirmation was accepted.
+
+Question Faced:
+
+Why disable public access?
+
+Understanding Developed:
+
+By default, Amazon S3 keeps files private.
+
+Since website hosting required public accessibility, users needed permission to open website files through a browser.
+
+Purpose:
+
+Without public access:
+
+Website would show:
+
+Access Denied
+
+Learning:
+
+Public access permissions are required when hosting public websites on Amazon S3.
+
+---
+
+STEP 5: Uploading HTML File to S3 Bucket
+
+Implementation:
+
+1. Opened created bucket.
+2. Selected Upload option.
+3. Added index.html file.
+4. Uploaded file successfully.
+5. Verified uploaded file.
+
+Understanding:
+
+The uploaded HTML file became website content stored inside AWS cloud storage.
+
+Purpose:
+
+S3 bucket stores webpage files which are later served as website content.
+
+Learning:
+
+Website files must be uploaded before enabling hosting.
+
+---
+
+STEP 6: Enabling Static Website Hosting
+
+Implementation:
+
+1. Opened bucket Properties section.
+2. Scrolled to Static Website Hosting.
+3. Clicked Edit.
+4. Enabled Static Website Hosting.
+5. Selected:
+
+“Host a static website”
+
+6. Added:
+
+index.html
+
+as index document.
+
+7. Saved changes.
+
+Question Faced:
+
+What is index.html?
+
+Understanding Developed:
+
+index.html acts as the homepage of a website.
+
+When website URL opens, AWS automatically loads:
+
+index.html
+
+Purpose:
+
+Convert Amazon S3 bucket into a website hosting service.
+
+Learning:
+
+Static Website Hosting allows S3 bucket files to be served as webpages.
+
+---
+
+STEP 7: Bucket Policy Configuration
+
+Implementation:
+
+1. Opened Permissions section.
+2. Navigated to Bucket Policy.
+3. Added JSON policy.
+4. Allowed:
+
+s3:GetObject
+
+permission.
+
+Question Faced:
+
+Why add bucket policy?
+
+Understanding Developed:
+
+Even after public access configuration, browser access still requires read permission.
+
+Bucket policy grants permission to public users to open website files.
+
+Purpose:
+
+Allow browser users to read files stored inside bucket.
+
+Without Bucket Policy:
+
+Access Denied
+
+Learning:
+
+Bucket policies manage access permissions in Amazon S3.
+
+---
+
+STEP 8: Website Endpoint Verification
+
+Implementation:
+
+1. Opened bucket Properties.
+2. Copied website endpoint URL.
+3. Opened endpoint in browser.
+4. Verified website loaded successfully.
+
+Result:
+
+Hosted webpage opened successfully through browser.
+
+Understanding:
+
+The endpoint acts as website URL generated by Amazon S3.
+
+Learning:
+
+Website endpoint provides public access to hosted website files.
+
+---
+
+Challenges Faced During Implementation
+
+1. Confusion regarding HTML file creation.
+2. Difficulty understanding .html extension.
+3. Confusion between text file and HTML webpage file.
+4. Understanding public access settings.
+5. Understanding why bucket policy was required.
+6. Understanding index.html purpose.
+7. Understanding website endpoint functionality.
+
+---
+
+Problem Resolution
+
+Each confusion was resolved through practical implementation and step-by-step understanding.
+
+Major understanding achieved:
+
+HTML File → S3 Bucket → Public Access → Static Website Hosting → Website Endpoint → Website Live
+
+---
+
+Service Integration Understanding
+
+Service | Purpose
+
+Amazon S3 | Stores website files and hosts website
+HTML | Provides webpage content
+Static Website Hosting | Enables webpage hosting
+Bucket Policy | Grants browser access permission
+Website Endpoint | Opens website publicly
+
+---
+
+Main Purpose of Task
+
+The primary objective of this task was to understand:
+
+• Cloud-based website hosting
+• Static website hosting using Amazon S3
+• Public access permissions in AWS
+• File hosting inside cloud storage
+• Website deployment without server management
+• Permission-based access control
+
+---
+
+Final Outcome
+
+Successfully created an HTML webpage, uploaded it into Amazon S3, enabled static website hosting, configured public access permissions using bucket policy, and verified successful webpage hosting through the S3 website endpoint.
+
+The task improved understanding of website deployment, AWS S3 storage, permission handling, and static website hosting workflow.
