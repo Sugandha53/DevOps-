@@ -1,0 +1,219 @@
+AWS CLOUDFRONT AND S3 STATIC WEBSITE HOSTING
+
+Task Objective
+
+The objective of this task was to understand how Amazon CloudFront can be integrated with Amazon S3 to host a static website securely and efficiently.
+
+Services Used
+
+• Amazon S3  
+• Amazon CloudFront  
+• HTML  
+• AWS Management Console  
+
+Project Workflow
+
+HTML File Creation
+        ↓
+Upload HTML File to S3 Bucket
+        ↓
+Disable S3 Static Website Hosting
+        ↓
+Create CloudFront Distribution
+        ↓
+Connect S3 Bucket with CloudFront
+        ↓
+Configure Default Root Object
+        ↓
+Deploy CloudFront Distribution
+        ↓
+Open Website through CloudFront URL
+
+STEP 1: HTML File Creation
+
+What I Did:
+• Created a simple HTML webpage file.  
+• Saved file as index.html.  
+
+Purpose:
+The HTML file acts as website content displayed in browser.
+
+Learning:
+HTML files are used to create webpage content.
+
+--------------------------------------------------
+
+STEP 2: Uploading HTML File to S3 Bucket
+
+What I Did:
+• Opened Amazon S3 service.  
+• Created an S3 bucket.  
+• Uploaded index.html file into bucket.
+
+Purpose:
+Amazon S3 was used to store website files.
+
+Learning:
+Amazon S3 acts as cloud storage for hosting files.
+
+--------------------------------------------------
+
+STEP 3: Disabled Static Website Hosting
+
+What I Did:
+• Opened S3 bucket properties.  
+• Disabled Static Website Hosting.
+
+Purpose:
+Website hosting needed to be done through CloudFront instead of direct S3 website endpoint.
+
+Understanding:
+
+Before:
+
+HTML → S3 → Website Endpoint
+
+Now:
+
+HTML → S3 → CloudFront → Website
+
+Learning:
+S3 stores website files while CloudFront delivers content securely and faster.
+
+--------------------------------------------------
+
+STEP 4: Created CloudFront Distribution
+
+What I Did:
+• Opened Amazon CloudFront.  
+• Clicked Create Distribution.  
+• Selected Single Website or App.
+
+Purpose:
+CloudFront is used for fast and secure content delivery.
+
+Learning:
+CloudFront improves website performance and accessibility.
+
+--------------------------------------------------
+
+STEP 5: Connected S3 Bucket with CloudFront
+
+What I Did:
+• Selected Amazon S3 as origin.  
+• Connected created S3 bucket with CloudFront.
+
+Purpose:
+CloudFront fetches website content from S3 bucket.
+
+Learning:
+S3 acts as origin while CloudFront serves files to users.
+
+Architecture:
+
+Browser → CloudFront → S3 Bucket
+
+--------------------------------------------------
+
+STEP 6: Configured Secure Bucket Access
+
+What I Did:
+• Enabled:
+
+Allow private S3 bucket access to CloudFront
+
+• Kept recommended settings enabled.
+
+Purpose:
+To securely allow CloudFront to access S3 bucket files.
+
+Learning:
+CloudFront securely accesses S3 without exposing bucket publicly.
+
+--------------------------------------------------
+
+STEP 7: Configured Default Root Object
+
+What I Did:
+• Added:
+
+index.html
+
+in Default Root Object.
+
+Purpose:
+To automatically load homepage when CloudFront URL opens.
+
+Learning:
+index.html works as homepage of website.
+
+--------------------------------------------------
+
+STEP 8: Created Distribution and Deployment
+
+What I Did:
+• Created CloudFront distribution.  
+• Waited for deployment completion.
+
+Status Verified:
+
+Deployed
+
+Purpose:
+CloudFront takes time to distribute content globally.
+
+Learning:
+Deployment prepares website for public access.
+
+--------------------------------------------------
+
+STEP 9: Website Verification
+
+What I Did:
+• Copied CloudFront Distribution Domain Name.  
+• Opened website in browser.
+
+Result:
+Website loaded successfully.
+
+Learning:
+CloudFront URL acts as public website URL.
+
+--------------------------------------------------
+
+Difference Between S3 Hosting and CloudFront Hosting
+
+S3 Static Website Hosting:
+• Browser directly accesses S3 endpoint.  
+• Basic hosting.  
+• Less secure.  
+• Normal performance.
+
+CloudFront Hosting:
+• Browser accesses CloudFront first.  
+• CloudFront fetches files from S3.  
+• Faster and secure content delivery.  
+• Better performance through caching and CDN.
+
+Simple Understanding:
+
+S3 = Storage
+
+CloudFront = Delivery
+
+--------------------------------------------------
+
+Main Learning Outcome
+
+• Understanding CloudFront integration with S3  
+• Static website hosting workflow  
+• Secure content delivery  
+• CDN-based website hosting  
+• CloudFront distribution management  
+• Default root object configuration
+
+--------------------------------------------------
+
+Final Outcome
+
+Successfully uploaded website files into Amazon S3, integrated Amazon CloudFront with S3, configured secure access and default root object, and hosted the website successfully using CloudFront distribution.
