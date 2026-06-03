@@ -1,0 +1,187 @@
+AWS S3 AND CLOUDFRONT WEBSITE VALIDATION AFTER HTML MODIFICATION
+
+Task Objective
+
+The objective of this task was to modify website content, upload the updated HTML file into Amazon S3, and validate updated content through both Amazon S3 and Amazon CloudFront.
+
+Services Used
+
+• Amazon S3
+• Amazon CloudFront
+• HTML
+• Visual Studio Code (VS Code)
+• AWS Management Console
+
+Project Workflow
+
+Modify HTML File
+↓
+Save Updated File
+↓
+Upload Updated File to S3 Bucket
+↓
+Validate Website through S3
+↓
+Validate Website through CloudFront
+↓
+Perform Cache Invalidation (If Required)
+↓
+Verify Updated Website Content
+
+STEP 1: Modified HTML File
+
+What I Did:
+
+• Opened the existing `index.html` file in Visual Studio Code.
+• Modified webpage content such as heading, paragraph, and text values.
+• Updated webpage information for validation testing.
+
+Purpose:
+
+The purpose was to verify whether website content updates are reflected after deployment.
+
+Learning:
+
+Website content can be modified by updating HTML files.
+
+---
+
+STEP 2: Saved Updated HTML File
+
+What I Did:
+
+• Saved the modified HTML file.
+• Kept the file name same:
+
+`index.html`
+
+Purpose:
+
+Saving the updated file ensures latest content is ready for deployment.
+
+Learning:
+
+Website changes must be saved before uploading to cloud storage.
+
+---
+
+STEP 3: Uploaded Updated File to Amazon S3
+
+What I Did:
+
+• Opened Amazon S3 service.
+• Opened the existing website bucket.
+• Clicked Upload.
+• Selected updated `index.html` file.
+• Replaced previous file with updated version.
+• Uploaded updated file successfully.
+
+Purpose:
+
+To update website content stored inside Amazon S3.
+
+Learning:
+
+Amazon S3 allows updating existing website files.
+
+---
+
+STEP 4: Website Validation through Amazon S3
+
+What I Did:
+
+• Opened S3 website endpoint URL.
+• Checked whether updated content was visible.
+
+Validation Result:
+
+• Updated webpage content displayed successfully.
+
+Purpose:
+
+To confirm that S3 successfully stored and served updated website content.
+
+Learning:
+
+S3 validation confirms successful website update.
+
+---
+
+STEP 5: Website Validation through CloudFront
+
+What I Did:
+
+• Opened CloudFront distribution URL.
+• Verified updated website content.
+
+Validation Result:
+
+• Website changes reflected successfully.
+
+Purpose:
+
+To confirm CloudFront delivered updated website content fetched from Amazon S3.
+
+Learning:
+
+CloudFront fetches and delivers website content from S3.
+
+Architecture:
+
+Browser → CloudFront → Amazon S3
+
+---
+
+STEP 6: Performed Cache Invalidation (If Required)
+
+What I Did:
+
+• Opened CloudFront Distribution.
+• Navigated to Invalidations section.
+• Created invalidation path:
+
+`/*`
+
+• Submitted invalidation request.
+
+Purpose:
+
+To remove cached content and fetch latest updated files from Amazon S3.
+
+Learning:
+
+CloudFront cache invalidation helps reflect recent website updates.
+
+---
+
+STEP 7: Final Website Verification
+
+What I Did:
+
+• Opened website through both S3 and CloudFront URLs.
+• Verified updated content displayed successfully.
+
+Result:
+
+• Website updated successfully.
+
+Learning:
+
+Website modifications can be validated through both storage and content delivery layers.
+
+---
+
+Main Learning Outcome
+
+• HTML modification workflow
+• Website update process in Amazon S3
+• Website validation through S3 endpoint
+• CloudFront validation workflow
+• Cache invalidation process
+• Static website content update deployment
+
+---
+
+Final Outcome
+
+Successfully modified website content, uploaded updated HTML file to Amazon S3, validated changes through both S3 and CloudFront URLs, and ensured latest content delivery through CloudFront validation.
