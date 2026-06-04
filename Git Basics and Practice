@@ -1,0 +1,384 @@
+# Git Learning and Practical Implementation Log
+
+## Introduction
+
+As part of my DevOps internship learning journey, I started exploring Git, a distributed version control system widely used for source code management and collaboration. The objective of this practice session was to understand Git fundamentals, perform hands-on exercises using Git Bash, and learn how Git tracks and manages file changes.
+
+---
+
+## Environment Setup
+
+### Git Installation Verification
+
+The first step was to verify whether Git was installed correctly on the system.
+
+Command executed:
+
+git --version
+
+Observation:
+
+The installed Git version was displayed successfully, confirming that Git was properly configured and ready for use.
+
+Learning:
+
+Git commands can only be executed if Git is correctly installed and available in the system path.
+
+---
+
+## Understanding Git and Git Bash
+
+During the learning process, I explored the difference between Git and Git Bash.
+
+Git:
+
+* A distributed version control system.
+* Used to track file changes and maintain project history.
+
+Git Bash:
+
+* A command-line interface for Windows.
+* Provides a Linux-like environment for executing Git commands.
+
+Learning:
+
+Git is the actual version control software, whereas Git Bash is a terminal used to interact with Git.
+
+---
+
+## Navigating the File System
+
+To understand the current working location and available files, several Linux commands were practiced.
+
+Commands used:
+
+pwd
+
+ls
+
+ls -a
+
+Purpose:
+
+* pwd displays the current working directory.
+* ls lists files and folders.
+* ls -a displays all files, including hidden files.
+
+Learning:
+
+These commands are frequently used in DevOps environments for file system navigation.
+
+---
+
+## Creating a Practice Directory
+
+A dedicated practice directory was created to perform Git exercises.
+
+Commands executed:
+
+mkdir practice
+
+cd practice
+
+Purpose:
+
+* Create a new folder named practice.
+* Move into the folder for further operations.
+
+Learning:
+
+Maintaining a separate workspace prevents accidental modifications to existing projects.
+
+---
+
+## Repository Initialization
+
+After entering the practice directory, Git was initialized.
+
+Command executed:
+
+git init
+
+Observation:
+
+Git created a hidden .git directory and displayed a successful initialization message.
+
+Learning:
+
+The git init command converts a normal folder into a Git repository.
+
+The .git directory stores:
+
+* Commit history
+* Branch information
+* Repository configuration
+* Git metadata
+
+An important observation was that after initialization, the terminal prompt displayed:
+
+(master)
+
+This indicated that the current folder had become a Git repository and the active branch was master.
+
+---
+
+## Understanding Repository Structure
+
+After initialization, hidden files were displayed using:
+
+ls -a
+
+Observation:
+
+The .git directory became visible.
+
+Learning:
+
+A Git repository consists of project files and a hidden .git directory that acts as the internal database for Git operations.
+
+---
+
+## Creating Files Using Git Bash
+
+Text files were created directly from the terminal.
+
+Commands executed:
+
+echo hello > file1.txt
+
+echo hello > file2.txt
+
+Observation:
+
+Even though the files did not previously exist, Git Bash automatically created them.
+
+Learning:
+
+The > operator creates a file if it does not exist and writes content into it.
+
+---
+
+## Understanding File Redirection Operators
+
+Two file redirection operators were studied.
+
+Overwrite:
+
+echo suzo > file1.txt
+
+Append:
+
+echo suzo >> file1.txt
+
+Learning:
+
+The single greater-than symbol (>) replaces existing file content.
+
+The double greater-than symbol (>>) appends content to the existing file without removing previous data.
+
+This was one of the important observations made during the practice session.
+
+---
+
+## Checking Repository Status
+
+The repository state was monitored using:
+
+git status
+
+Purpose:
+
+To identify:
+
+* Untracked files
+* Modified files
+* Staged files
+* Current branch information
+
+Learning:
+
+git status is one of the most frequently used Git commands because it provides a complete view of repository changes.
+
+---
+
+## Understanding the Staging Area
+
+Files were added to the staging area using:
+
+git add file1.txt
+
+git add file2.txt
+
+Observation:
+
+Git reported the files under:
+
+Changes to be committed
+
+Learning:
+
+Git uses a staging area as an intermediate step before creating a commit.
+
+Workflow observed:
+
+Working Directory
+↓
+git add
+↓
+Staging Area
+↓
+git commit
+↓
+Repository
+
+---
+
+## Understanding File Modification After Staging
+
+After staging a file, its content was modified again.
+
+Command executed:
+
+echo suzo > file1.txt
+
+Observation:
+
+Git displayed:
+
+Changes to be committed
+
+and
+
+Changes not staged for commit
+
+at the same time.
+
+Learning:
+
+Git was tracking two different versions:
+
+* One version in the staging area.
+* Another version in the working directory.
+
+This demonstrated how Git keeps track of file changes separately before committing.
+
+---
+
+## Re-staging Modified Files
+
+The modified file was added again using:
+
+git add file1.txt
+
+Observation:
+
+The unstaged modification warning disappeared.
+
+Learning:
+
+Running git add again updates the staging area with the latest file version.
+
+---
+
+## Understanding Commits
+
+An attempt was made to execute:
+
+git commit -m
+
+Observation:
+
+Git returned an error because no commit message was provided.
+
+Correct command:
+
+git commit -m "Initial commit"
+
+Learning:
+
+A commit message is mandatory when using the -m option.
+
+A commit represents a snapshot of the project at a specific point in time.
+
+---
+
+## Exploring Vim Editor
+
+During commit operations, Git opened the Vim editor.
+
+Observations:
+
+* Vim opened the COMMIT_EDITMSG file.
+* Exiting Vim initially caused confusion.
+
+Learning:
+
+Useful Vim commands:
+
+Exit without saving:
+
+:q!
+
+Save and exit:
+
+:wq
+
+This helped in understanding how Git interacts with text editors during commit creation.
+
+---
+
+## Configuring Visual Studio Code as the Default Git Editor
+
+To avoid using Vim, Visual Studio Code was configured as the default Git editor.
+
+Verification:
+
+code --version
+
+Configuration:
+
+git config --global core.editor "code --wait"
+
+Learning:
+
+Git can be integrated with modern editors to simplify commit message editing.
+
+---
+
+## Understanding Git Branches
+
+The concept of branches was explored conceptually.
+
+Learning:
+
+A branch provides an isolated workspace for development.
+
+Benefits:
+
+* Safe experimentation
+* Feature development
+* Team collaboration
+* Reduced risk of affecting the main codebase
+
+The default branch observed during practice was:
+
+master
+
+---
+
+## Key Takeaways
+
+Throughout this learning session, I gained practical experience with:
+
+* Git installation verification
+* Repository initialization
+* Linux command-line navigation
+* File creation and modification
+* Git status monitoring
+* Staging area management
+* Commit creation
+* Branch concepts
+* Vim editor usage
+* VS Code integration with Git
+
+This practice established a strong foundation for future Git, GitHub, and DevOps-related workflows.
