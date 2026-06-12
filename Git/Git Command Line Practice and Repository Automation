@@ -1,0 +1,427 @@
+# Git Command Line Practice and Repository Automation
+
+## Introduction
+
+This practice session focused on learning Git and GitHub operations completely through command line interface (CLI) without using manual GitHub options.
+
+The main objective was to understand repository creation, file creation, version management, command line automation, and synchronization between local repository and remote GitHub repository.
+
+All operations were performed using Git Bash on Windows.
+
+---
+
+## Task Assigned
+
+The task assigned during mentoring session was:
+
+1. Create **4 separate GitHub repositories** using command line only.
+
+Repositories created:
+
+```text
+repo1-task
+repo2-task
+repo3-task
+repo4-task
+```
+
+2. In each repository create **4 files**.
+
+Files created in each repository:
+
+```text
+file1.txt
+file2.txt
+file3.txt
+file4.txt
+```
+
+3. In every file add the following version variable:
+
+```text
+$MODULE_VERSION="1.2.1"
+```
+
+4. Push all repositories to GitHub using command line.
+
+5. Change module version in all repositories:
+
+```text
+1.2.1 → 3.4.1
+```
+
+without manually editing files.
+
+6. Show command history as proof of work.
+
+---
+
+## Step 1 : GitHub CLI Setup
+
+GitHub CLI was installed and authenticated.
+
+Commands used:
+
+```bash
+gh --version
+gh auth login
+gh auth status
+```
+
+Purpose:
+
+* Connect GitHub account with terminal.
+* Enable GitHub repository management from command line.
+
+---
+
+## Step 2 : Creating 4 GitHub Repositories
+
+Repositories were created directly from terminal.
+
+Commands used:
+
+```bash
+gh repo create repo1-task --public
+gh repo create repo2-task --public
+gh repo create repo3-task --public
+gh repo create repo4-task --public
+```
+
+Purpose:
+
+* Create repositories without manually clicking GitHub website.
+
+Repositories created:
+
+```text
+repo1-task
+repo2-task
+repo3-task
+repo4-task
+```
+
+---
+
+## Step 3 : Cloning Repository To Local Machine
+
+Repositories were downloaded to local system.
+
+Commands used:
+
+```bash
+git clone https://github.com/username/repo1-task.git
+git clone https://github.com/username/repo2-task.git
+git clone https://github.com/username/repo3-task.git
+git clone https://github.com/username/repo4-task.git
+```
+
+Purpose:
+
+* Create local copy of remote GitHub repositories.
+
+---
+
+## Step 4 : Creating 4 Files In Repository
+
+Inside every repository 4 files were created.
+
+Command used:
+
+```bash
+touch file1.txt file2.txt file3.txt file4.txt
+```
+
+Files created:
+
+```text
+file1.txt
+file2.txt
+file3.txt
+file4.txt
+```
+
+Purpose:
+
+* Create files directly from terminal without manual creation.
+
+---
+
+## Step 5 : Writing Version Configuration In Files
+
+The same module version was added inside every file.
+
+Command used:
+
+```bash
+echo '$MODULE_VERSION="1.2.1"' > file1.txt
+echo '$MODULE_VERSION="1.2.1"' > file2.txt
+echo '$MODULE_VERSION="1.2.1"' > file3.txt
+echo '$MODULE_VERSION="1.2.1"' > file4.txt
+```
+
+Output inside each file:
+
+```text
+$MODULE_VERSION="1.2.1"
+```
+
+Purpose:
+
+* Store version configuration inside files.
+
+---
+
+## Step 6 : Git Workflow
+
+After creating files, Git workflow was used.
+
+Commands used:
+
+```bash
+git add .
+git commit -m "Added 4 files with module version 1.2.1"
+git push origin main
+```
+
+Understanding:
+
+```text
+git add     → prepare changes
+
+git commit  → save changes locally
+
+git push    → upload changes to GitHub
+```
+
+Purpose:
+
+* Save changes locally and upload to remote repository.
+
+---
+
+## Step 7 : Automating Repeated Work Using Loop
+
+Instead of repeating commands manually for all repositories, shell loop was used.
+
+Command used:
+
+```bash
+for repo in repo2-task repo3-task repo4-task
+do
+commands
+done
+```
+
+Purpose:
+
+* Automate repeated commands for multiple repositories.
+
+Understanding:
+
+```text
+for  → repeat operation
+
+do   → start execution
+
+done → stop execution
+```
+
+---
+
+## Step 8 : Changing Version Automatically
+
+All file versions were changed automatically from:
+
+```text
+1.2.1
+```
+
+to
+
+```text
+3.4.1
+```
+
+Command used:
+
+```bash
+sed -i 's/1.2.1/3.4.1/g' *.txt
+```
+
+Purpose:
+
+* Replace old version with new version automatically.
+
+Understanding:
+
+```text
+sed = stream editor
+
+-i  = edit file directly
+
+s   = substitute
+
+g   = replace globally
+```
+
+Result:
+
+```text
+$MODULE_VERSION="3.4.1"
+```
+
+---
+
+## Step 9 : Manual File Version Change Practice
+
+A single file was changed manually.
+
+File used:
+
+```text
+file2.txt
+```
+
+Version changed:
+
+```text
+3.4.1 → 0.7.2
+```
+
+Command used:
+
+```bash
+sed -i 's/3.4.1/0.7.2/g' file2.txt
+```
+
+Purpose:
+
+* Practice changing version in one file only.
+
+Important learning:
+
+Changing file locally does not update GitHub automatically.
+
+Need:
+
+```bash
+git add .
+git commit -m "Updated version"
+git push origin main
+```
+
+---
+
+## Step 10 : Viewing Command History
+
+Command history was checked to verify all work done.
+
+Commands used:
+
+```bash
+history
+history | grep git
+history | grep gh
+```
+
+Purpose:
+
+* Show all commands executed during task.
+
+---
+
+## Errors Faced During Practice
+
+### Error 1 : Wrong Git Syntax
+
+Incorrect command:
+
+```bash
+git add.
+```
+
+Correct command:
+
+```bash
+git add .
+```
+
+Problem:
+
+Missing space before dot.
+
+---
+
+### Error 2 : Trying To Enter File Using cd
+
+Incorrect command:
+
+```bash
+cd repo3/file2.txt
+```
+
+Problem:
+
+`cd` works only with directories, not files.
+
+---
+
+### Error 3 : Incorrect sed Syntax
+
+Incorrect command:
+
+```bash
+sed -i s/3.4.1/0.7.2/g file2.txt
+```
+
+Correct command:
+
+```bash
+sed -i 's/3.4.1/0.7.2/g' file2.txt
+```
+
+Problem:
+
+Missing quotation marks.
+
+---
+
+## Concepts Learned
+
+Topics learned during practice:
+
+* GitHub CLI
+* Repository Creation Through Command Line
+* Local Repository and Remote Repository
+* Git Add, Commit and Push Workflow
+* File Creation Through Terminal
+* Writing Data Using echo
+* Bash Loop Automation
+* sed Command For Text Replacement
+* GitHub Synchronization Process
+* Command History Verification
+
+---
+
+## Areas Where Improvement Is Needed
+
+Need more practice in:
+
+* Bash scripting
+* for, do, done loop syntax
+* sed command syntax
+* Git branches
+* Merge conflict handling
+* Local vs Remote repository understanding
+* More command line confidence
+
+---
+
+## Conclusion
+
+This practice session provided hands-on understanding of Git and GitHub command line workflow.
+
+Four repositories were created successfully, files were managed completely through terminal, version values were updated automatically using shell scripting, and synchronization between local machine and GitHub was understood practically.
+
+This session improved confidence in command line based Git operations and introduced automation concepts useful in DevOps workflow.
