@@ -1,0 +1,302 @@
+# Branch Creation and Branch-Based Tag + Release Management
+
+## Introduction
+
+Branch management in Git allows developers to work independently on separate development environments without affecting the main project. Tags help mark version points on specific commits, while Releases publish those versions on GitHub.
+
+This workflow helps manage multiple development branches and maintain separate version control for each branch.
+
+---
+
+## Objective
+
+Practice creating two branches and performing separate tag and release operations on each branch to understand branch-based version management workflow.
+
+---
+
+## Step 1 — Created First Branch
+
+Created a new branch from the main branch.
+
+Command used:
+
+```bash
+git checkout -b 1st-branch
+```
+
+Purpose:
+
+* Create a separate working branch.
+* Understand branch creation process.
+
+Observation:
+
+* New branch copied the current state of main branch.
+
+---
+
+## Step 2 — Added Branch-Specific Changes in First Branch
+
+Created a new file inside first branch.
+
+Command used:
+
+```bash
+echo "work in branch 1" > branch1.txt
+```
+
+Added file to staging area.
+
+```bash
+git add .
+```
+
+Committed changes.
+
+```bash
+git commit -m "Create a new file called branch1.txt"
+```
+
+Pushed branch to GitHub.
+
+```bash
+git push origin 1st-branch
+```
+
+Purpose:
+
+* Create changes independent from main branch.
+
+Observation:
+
+* GitHub showed branch is ahead of main branch.
+
+---
+
+## Step 3 — Created Tag for First Branch
+
+Created a version tag while working inside first branch.
+
+Command used:
+
+```bash
+git tag branch-v1
+```
+
+Pushed tag to GitHub.
+
+```bash
+git push origin branch-v1
+```
+
+Purpose:
+
+* Mark version of first branch changes.
+
+Observation:
+
+* Tag created successfully for current branch commit.
+
+---
+
+## Step 4 — Created Release for First Branch Tag
+
+Created GitHub release using branch tag.
+
+Command used:
+
+```bash
+gh release create branch-v1
+```
+
+During process:
+
+* Added release title.
+* Left release notes blank.
+* Selected No for prerelease.
+* Published release.
+
+Purpose:
+
+* Publish version release for first branch.
+
+Observation:
+
+* Release became visible in GitHub Releases section.
+
+---
+
+## Step 5 — Created Second Branch
+
+Created another branch while working from first branch.
+
+Command used:
+
+```bash
+git branch 2nd-branch
+```
+
+Switched to second branch.
+
+```bash
+git checkout 2nd-branch
+```
+
+Purpose:
+
+* Create second development branch.
+
+Observation:
+
+* Branch created locally first.
+
+---
+
+## Step 6 — Added Branch-Specific Changes in Second Branch
+
+Created a new file inside second branch.
+
+Command used:
+
+```bash
+echo "work in branch 2" > branch2.txt
+```
+
+Added changes.
+
+```bash
+git add .
+```
+
+Committed changes.
+
+```bash
+git commit -m "Create a new file called branch2.txt"
+```
+
+Pushed second branch.
+
+```bash
+git push origin 2nd-branch
+```
+
+Purpose:
+
+* Create separate changes for second branch.
+
+Observation:
+
+* Second branch became visible on GitHub after push.
+
+---
+
+## Step 7 — Created Tag for Second Branch
+
+Created version tag while working inside second branch.
+
+Command used:
+
+```bash
+git tag branch2-v1
+```
+
+Pushed tag to GitHub.
+
+```bash
+git push origin branch2-v1
+```
+
+Purpose:
+
+* Mark version point for second branch changes.
+
+Observation:
+
+* Tag successfully uploaded to GitHub.
+
+---
+
+## Step 8 — Created Release for Second Branch Tag
+
+Created release for second branch version.
+
+Command used:
+
+```bash
+gh release create branch2-v1
+```
+
+During process:
+
+* Added release title.
+* Left release notes blank.
+* Selected No for prerelease.
+* Published release successfully.
+
+Purpose:
+
+* Publish version release for second branch.
+
+Observation:
+
+* Release visible on GitHub repository.
+
+---
+
+## Step 9 — Observed Branch Behavior
+
+Observed that second branch contained files from previous branch.
+
+Files visible:
+
+```text
+file1.txt
+file2.txt
+file3.txt
+file4.txt
+branch1.txt
+branch2.txt
+```
+
+Reason understood:
+
+* Second branch was created while current branch was first branch.
+
+Learning:
+
+```text
+Branch always copies current branch state.
+```
+
+---
+
+## Key Learnings
+
+* Branches create separate development environments.
+* New branch copies the state of the current branch.
+* Branch-specific files can be created independently.
+* Tags can be created separately on different branches.
+* Releases can be created separately for each branch.
+* Branch must be pushed to GitHub to appear remotely.
+* GitHub tracks branch differences independently.
+* Version management can be performed independently per branch.
+
+---
+
+## Final Understanding
+
+```text
+git checkout -b branch-name → Create and switch branch
+
+git add . → Stage changes
+
+git commit -m "message" → Save branch changes
+
+git push origin branch-name → Push branch to GitHub
+
+git tag tag-name → Create tag
+
+git push origin tag-name → Push tag
+
+gh release create tag-name → Create release
+```
