@@ -1,0 +1,268 @@
+# Git Tag and GitHub Release Management
+
+## Introduction
+
+Git Tag and GitHub Release Management is the process of creating version identifiers for important project states and publishing those versions on GitHub for tracking, deployment, and version control.
+
+Tags help mark specific commits as versions, while Releases provide a published version of the project on GitHub.
+
+---
+
+## Objective
+
+Practice creating, managing, deleting, and publishing Git Tags and GitHub Releases manually and through command line to understand version management workflow.
+
+---
+
+## Step 1 — Created Git Tags Locally
+
+Created multiple version tags inside the local repository.
+
+Commands used:
+
+```bash
+git tag v1.0
+git tag v2.0
+git tag v3.0
+git tag v4.0
+```
+
+Purpose:
+
+* Mark specific project versions.
+* Understand version labeling in Git.
+
+Observation:
+
+* Tags were created only in local repository.
+
+---
+
+## Step 2 — Verified Existing Local Tags
+
+Checked all available tags inside local repository.
+
+Command used:
+
+```bash
+git tag
+```
+
+Purpose:
+
+* Verify successful tag creation.
+* View all locally stored tags.
+
+Output:
+
+```text
+v1.0
+v2.0
+v3.0
+v4.0
+```
+
+---
+
+## Step 3 — Pushed Tags to GitHub Repository
+
+Uploaded local tags to remote GitHub repository.
+
+Command used:
+
+```bash
+git push origin v4.0
+```
+
+Purpose:
+
+* Synchronize local tags with GitHub.
+
+Observation:
+
+* Tags do not automatically appear on GitHub after local creation.
+* Push operation is required.
+
+---
+
+## Step 4 — Verified Tags on GitHub
+
+Opened GitHub repository and checked Tags section.
+
+Tags visible:
+
+```text
+v1.0
+v2.0
+v3.0
+v4.0
+```
+
+Purpose:
+
+* Confirm successful synchronization of tags.
+
+Learning:
+
+* Local and remote repositories work independently until push operation.
+
+---
+
+## Step 5 — Deleted Tag from Local Repository
+
+Removed an existing tag locally.
+
+Command used:
+
+```bash
+git tag -d v1.0
+```
+
+Purpose:
+
+* Practice local tag deletion.
+
+Observation:
+
+* Tag removed from laptop only.
+* Tag still remained on GitHub repository.
+
+Learning:
+
+* Local deletion does not affect remote repository.
+
+---
+
+## Step 6 — Deleted Tag from GitHub Repository
+
+Deleted remote tag from GitHub.
+
+Command used:
+
+```bash
+git push origin :refs/tags/v1.0
+```
+
+Purpose:
+
+* Remove tag from remote GitHub repository.
+
+Observation:
+
+* Tag successfully removed from GitHub.
+
+Learning:
+
+* Local deletion and remote deletion are separate operations.
+
+---
+
+## Step 7 — Understood Difference Between Tag and Release
+
+Learned conceptual difference between Git Tag and GitHub Release.
+
+Concept understood:
+
+```text
+Tag = Version reference attached to commit
+
+Release = Published GitHub version created using a tag
+```
+
+Purpose:
+
+* Understand version management workflow.
+
+---
+
+## Step 8 — Created GitHub Release Using GitHub CLI
+
+Created release directly from command line using GitHub CLI.
+
+First incorrect command:
+
+```bash
+gh releases create v4.0
+```
+
+Error received:
+
+```text
+unknown command "releases"
+```
+
+Issue identified:
+
+* Incorrect command syntax.
+
+---
+
+## Step 9 — Corrected Release Command
+
+Executed correct GitHub CLI command.
+
+Correct command:
+
+```bash
+gh release create v4.0
+```
+
+During process:
+
+* Added release title.
+* Left release notes blank.
+* Selected No for prerelease.
+* Published release successfully.
+
+Purpose:
+
+* Create release directly on GitHub through command line.
+
+---
+
+## Step 10 — Verified Release on GitHub
+
+Checked GitHub repository release section.
+
+Release visible:
+
+```text
+v4.0
+```
+
+Purpose:
+
+* Confirm successful release publication.
+
+Observation:
+
+* Release automatically appears in GitHub Releases section after successful execution.
+
+---
+
+## Key Learnings
+
+* Git Tags are used to mark version points in project history.
+* Tags created locally must be pushed manually to GitHub.
+* Local and remote repositories behave independently.
+* Deleting local tag does not delete remote tag.
+* GitHub Releases are created using Tags.
+* GitHub CLI allows release creation directly from terminal.
+* Git command syntax must be written correctly.
+* Version management is an important part of repository workflow.
+
+---
+
+## Final Understanding
+
+```text
+git tag → Create version label
+
+git push origin tag-name → Push tag to GitHub
+
+git tag -d tag-name → Delete local tag
+
+git push origin :refs/tags/tag-name → Delete remote tag
+
+gh release create tag-name → Create GitHub Release
+```
