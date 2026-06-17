@@ -1,0 +1,276 @@
+# Git Branch Deletion Task (Local and Remote)
+
+## Objective
+
+The objective of this task was to understand how Git Branch deletion works in both the local repository and the remote GitHub repository. The task focused on learning how to safely delete branches after work completion, understanding branch deletion errors, and differentiating between local branch deletion and remote branch deletion.
+
+---
+
+## Task Overview
+
+In Git, branches are temporary development environments used for feature development, testing, bug fixing, or experimentation. Once the work in a branch is completed and merged into the main branch, the branch is usually deleted to keep the repository clean and organized.
+
+This task involved practicing branch deletion locally through Git commands and remotely through GitHub.
+
+---
+
+## Work Performed
+
+### 1. Created Multiple Branches for Practice
+
+Different branches were created for testing Git operations.
+
+Example branches:
+
+- practice  
+- 1st-branch  
+- 2nd-branch  
+- conflict-branch  
+
+Purpose:
+
+- Understand branch management workflow  
+- Prepare branches for merge and deletion practice  
+
+---
+
+### 2. Local Branch Deletion
+
+After completing branch work, branches were deleted from the local system.
+
+Command used:
+
+```bash
+git branch -d branch-name
+```
+
+Example:
+
+```bash
+git branch -d practice
+```
+
+Purpose:
+
+- Delete branch from local machine after work completion  
+
+Observation:
+
+Git allows deletion only if branch changes are already merged.
+
+---
+
+### 3. Force Deletion of Local Branch
+
+While deleting some branches, Git returned an error because the branch was not fully merged.
+
+Error observed:
+
+```text
+error: The branch is not fully merged
+```
+
+To force delete, the following command was used:
+
+```bash
+git branch -D branch-name
+```
+
+Example:
+
+```bash
+git branch -D conflict-branch
+```
+
+Purpose:
+
+- Force delete branch even if merge is incomplete  
+
+Learning:
+
+- `-d` = safe delete  
+- `-D` = force delete  
+
+---
+
+### 4. Error While Deleting Current Branch
+
+During practice, an attempt was made to delete the branch currently in use.
+
+Example:
+
+```bash
+git branch -d practice
+```
+
+Git returned error:
+
+```text
+cannot delete branch used by worktree
+```
+
+Reason:
+
+- Git does not allow deleting the branch that is currently checked out.
+
+Solution:
+
+Switch to another branch first.
+
+Example:
+
+```bash
+git checkout main
+```
+
+Then delete:
+
+```bash
+git branch -d practice
+```
+
+Learning:
+
+- Current active branch cannot be deleted.  
+
+---
+
+### 5. Remote Branch Deletion from GitHub
+
+After deleting the branch locally, the remote branch stored on GitHub was deleted separately.
+
+Command used:
+
+```bash
+git push origin --delete branch-name
+```
+
+Example:
+
+```bash
+git push origin --delete practice
+```
+
+Purpose:
+
+- Delete branch from GitHub remote repository  
+
+Observation:
+
+Deleting a local branch does not automatically delete the GitHub branch.
+
+Remote deletion requires a separate command.
+
+---
+
+### 6. Incorrect Branch Deletion Command Practice
+
+While practicing remote deletion, incorrect command syntax was tested.
+
+Incorrect command:
+
+```bash
+git push --delete conflict-branch
+```
+
+Git returned error:
+
+```text
+--delete doesn't make sense without refs
+```
+
+Reason:
+
+- Remote name `origin` was missing.
+
+Correct command:
+
+```bash
+git push origin --delete conflict-branch
+```
+
+Learning:
+
+- Remote deletion requires specifying the remote repository name.
+
+---
+
+## Commands Practiced
+
+Delete local branch:
+
+```bash
+git branch -d branch-name
+```
+
+Force delete local branch:
+
+```bash
+git branch -D branch-name
+```
+
+Delete remote GitHub branch:
+
+```bash
+git push origin --delete branch-name
+```
+
+Switch branch before deletion:
+
+```bash
+git checkout main
+```
+
+---
+
+## Key Learnings
+
+- Git branches can be deleted locally and remotely.  
+- Local branch deletion and remote branch deletion are separate operations.  
+- `git branch -d` performs safe deletion only after merge.  
+- `git branch -D` force deletes branch even if not merged.  
+- Git does not allow deletion of the currently active branch.  
+- GitHub remote branch deletion requires a separate push command.  
+- Correct syntax is important while deleting remote branches.  
+
+---
+
+## Real World Use Case
+
+In software development, developers create temporary branches for specific tasks.
+
+Examples:
+
+- feature-login  
+- bugfix-payment  
+- testing-branch  
+
+After the feature is completed and merged into the main branch, old branches are deleted.
+
+Example workflow:
+
+```bash
+git checkout main
+git merge feature-login
+git branch -d feature-login
+git push origin --delete feature-login
+```
+
+Purpose:
+
+- Keep repository clean  
+- Remove unnecessary branches after development work  
+
+---
+
+## Final Understanding
+
+This task provided practical understanding of Git branch lifecycle management.
+
+Important concept learned:
+
+- Branches are temporary workspaces used for development.  
+- After merging, branches should be deleted to maintain repository cleanliness.  
+- Local and remote branches are managed separately.  
+
+**Branch deletion is an essential part of Git repository management and development workflow.**
