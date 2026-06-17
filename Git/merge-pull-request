@@ -1,0 +1,238 @@
+# Merge and Pull Request Task
+
+## Objective
+
+The objective of this task was to understand how branch merging works in Git and how Pull Requests are used in GitHub for integrating code changes into the main branch. The task focused on learning both command line merge and GitHub Pull Request workflow, which are commonly used in professional development environments.
+
+---
+
+## Task Overview
+
+In Git, developers create separate branches to work on new features or changes without affecting the main branch. Once the work is completed, those changes are merged into the main branch.
+
+There are two common ways to perform merging:
+
+1. Merge using Git command line  
+2. Merge using GitHub Pull Request  
+
+The purpose of this task was to understand both workflows and learn how code integration happens during collaborative development.
+
+---
+
+## Work Performed
+
+### 1. Created Separate Branches for Testing
+
+Different branches were already created for merge practice.
+
+Example branches used:
+
+- 1st-branch  
+- 2nd-branch  
+
+Purpose:
+
+- Create separate development environments for merge practice.  
+
+---
+
+### 2. Performed Merge Using Command Line
+
+Changes were created in **1st-branch** and then merged into the **main branch** using Git commands.
+
+Commands used:
+
+```bash
+git checkout main
+git merge 1st-branch
+git push origin main
+```
+
+Purpose:
+
+- Understand direct branch merging using command line.
+
+Observation:
+
+- Git performed a **Fast Forward Merge** because no conflicting changes existed.
+
+Learning:
+
+- If only one branch has changes, Git merges automatically without conflict.
+
+---
+
+### 3. Verified Changes in Main Branch
+
+After merging, the main branch was checked on GitHub.
+
+Observation:
+
+- Files created in 1st-branch became visible inside main branch after merge.
+
+Purpose:
+
+- Verify successful merge operation.
+
+---
+
+### 4. Pull Request Practice Using GitHub
+
+Instead of merging through command line, changes created in **2nd-branch** were merged using GitHub Pull Request workflow.
+
+Process followed:
+
+- Open repository on GitHub  
+- Select Compare Branch  
+- Choose base branch = main  
+- Choose compare branch = 2nd-branch  
+- Create Pull Request  
+- Review changes  
+- Merge Pull Request  
+- Confirm Merge  
+
+Purpose:
+
+- Understand GitHub based merge workflow.
+
+---
+
+### 5. Pull Request Creation
+
+A Pull Request was created from:
+
+```text
+2nd-branch → main
+```
+
+Meaning:
+
+- Requesting GitHub to merge branch changes into main branch.
+
+Observation:
+
+GitHub displayed:
+
+```text
+Able to merge
+No conflicts detected
+```
+
+Learning:
+
+- Pull Request allows code review before merging.
+
+---
+
+### 6. Merged Pull Request
+
+After reviewing the Pull Request, changes were merged into the main branch.
+
+Process completed:
+
+- Create Pull Request  
+- Merge Pull Request  
+- Confirm Merge  
+
+Purpose:
+
+- Complete merge operation using GitHub interface.
+
+Observation:
+
+- Pull request successfully merged and closed.
+
+---
+
+### 7. Branch Cleanup After Merge
+
+After successful merge, the branch became unnecessary.
+
+GitHub provided option to delete merged branch.
+
+Purpose:
+
+- Understand cleanup process after merge completion.
+
+Learning:
+
+- Branches are temporary workspaces and can be deleted after successful merge.
+
+---
+
+## Commands Practiced
+
+Command line merge:
+
+```bash
+git checkout main
+git merge branch-name
+git push origin main
+```
+
+Push branch before Pull Request:
+
+```bash
+git push origin branch-name
+```
+
+---
+
+## Key Learnings
+
+- Git allows direct branch merging through command line.  
+- GitHub provides Pull Request workflow for controlled merging.  
+- Fast Forward Merge happens when no conflicting changes exist.  
+- Pull Requests allow review before code integration.  
+- Pull Requests are commonly used in team projects.  
+- Temporary branches can be deleted after successful merge.  
+
+---
+
+## Real World Use Case
+
+In software development teams, developers work on separate branches.
+
+Examples:
+
+- feature-login  
+- feature-payment  
+- feature-dashboard  
+
+After work completion:
+
+- Developer pushes branch  
+- Creates Pull Request  
+- Team reviews code  
+- Changes are merged into main branch  
+- Branch is deleted  
+
+Example command line workflow:
+
+```bash
+git checkout main
+git merge feature-login
+git push origin main
+```
+
+Or using GitHub workflow:
+
+```text
+Create Pull Request → Review → Merge → Delete Branch
+```
+
+---
+
+## Final Understanding
+
+This task helped in understanding two different methods of code integration in Git.
+
+Important understanding:
+
+- Merge = Directly combine branch changes into another branch.  
+- Pull Request = Request GitHub to review and merge branch changes into main branch.  
+
+Pull Requests are commonly used in professional development teams for collaboration and code review.
+
+---
+
