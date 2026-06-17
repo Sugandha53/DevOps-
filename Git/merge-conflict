@@ -1,0 +1,334 @@
+# Merge Conflict and Conflict Resolution Task
+
+## Objective
+
+The objective of this task was to understand how merge conflicts occur in Git when two branches modify the same file differently, and how to manually resolve those conflicts before completing the merge process.
+
+This task focused on understanding conflict creation, conflict detection, manual conflict resolution, and final integration of code changes.
+
+---
+
+## Task Overview
+
+A merge conflict occurs when Git is unable to automatically combine changes because the same file has been modified differently in two separate branches.
+
+In such situations, Git pauses the merge process and requires the developer to manually decide which changes should be kept.
+
+The purpose of this task was to create an intentional conflict scenario and learn how conflict resolution works in real development workflows.
+
+---
+
+## Work Performed
+
+### 1. Created a New Branch for Conflict Testing
+
+A separate branch was created from the main branch for conflict practice.
+
+Command used:
+
+```bash
+git checkout -b conflict-branch
+```
+
+Purpose:
+
+- Create a separate development branch for conflict testing.
+
+---
+
+### 2. Modified Same File in Feature Branch
+
+Inside the newly created branch, changes were made to an existing file.
+
+Example:
+
+```text
+file1.txt → BRANCH VERSION CHANGE
+```
+
+Changes were committed and pushed.
+
+Commands used:
+
+```bash
+git add .
+git commit -m "branch file changes"
+git push origin conflict-branch
+```
+
+Purpose:
+
+- Create branch-specific changes.
+
+---
+
+### 3. Modified Same File in Main Branch
+
+The same file was modified differently in the main branch.
+
+Example:
+
+```text
+file1.txt → MAIN VERSION CHANGE
+```
+
+Changes were committed separately.
+
+Commands used:
+
+```bash
+git checkout main
+git add .
+git commit -m "main file changes"
+git push origin main
+```
+
+Purpose:
+
+- Create separate changes on main branch for conflict generation.
+
+---
+
+### 4. Attempted Merge Operation
+
+After modifying the same file in both branches, a merge operation was attempted.
+
+Example command:
+
+```bash
+git merge conflict-branch
+```
+
+Git was unable to merge automatically.
+
+Git output:
+
+```text
+CONFLICT (content): Merge conflict in file1.txt
+Automatic merge failed
+```
+
+Purpose:
+
+- Observe how Git detects conflicting changes.
+
+---
+
+### 5. Conflict Detection by Git
+
+Git stopped the merge process and displayed conflict markers inside the file.
+
+Example file content:
+
+```text
+<<<<<<< HEAD
+MAIN VERSION CHANGE
+=======
+BRANCH VERSION CHANGE
+>>>>>>> commit-id
+```
+
+Meaning:
+
+- HEAD → Current branch version  
+- Lower section → Incoming branch version  
+
+Purpose:
+
+- Understand how Git shows conflicting changes.
+
+---
+
+### 6. Manual Conflict Resolution
+
+The conflicted file was opened manually and conflict markers were removed.
+
+Command used:
+
+```bash
+notepad file1.txt
+```
+
+Conflict markers removed:
+
+```text
+<<<<<<< HEAD
+=======
+>>>>>>> commit-id
+```
+
+Final file content was manually decided.
+
+Example final result:
+
+```text
+MAIN VERSION CHANGE
+BRANCH VERSION CHANGE
+```
+
+Purpose:
+
+- Resolve conflict manually by selecting final file content.
+
+---
+
+### 7. Staged Resolved File
+
+After editing the file, Git was informed that conflict had been resolved.
+
+Command used:
+
+```bash
+git add .
+```
+
+Purpose:
+
+- Mark resolved file for commit.
+
+---
+
+### 8. Completed Merge Process
+
+After staging the resolved file, merge process was completed by creating a new commit.
+
+Command used:
+
+```bash
+git commit -m "resolved merge conflict"
+```
+
+Purpose:
+
+- Finalize conflict resolution and complete merge.
+
+---
+
+### 9. Pushed Final Changes to GitHub
+
+After successful conflict resolution, final changes were pushed.
+
+Command used:
+
+```bash
+git push origin main
+```
+
+Purpose:
+
+- Upload final merged version to GitHub repository.
+
+---
+
+## Commands Practiced
+
+Create branch:
+
+```bash
+git checkout -b conflict-branch
+```
+
+Merge branch:
+
+```bash
+git merge conflict-branch
+```
+
+Check conflicted file:
+
+```bash
+cat file1.txt
+```
+
+Open file manually:
+
+```bash
+notepad file1.txt
+```
+
+Stage resolved file:
+
+```bash
+git add .
+```
+
+Complete merge:
+
+```bash
+git commit -m "resolved merge conflict"
+```
+
+Push changes:
+
+```bash
+git push origin main
+```
+
+---
+
+## Key Learnings
+
+- Merge conflict happens when the same file is modified differently in two branches.  
+- Git cannot automatically decide which version should be kept.  
+- Git stops merge process and displays conflict markers inside the file.  
+- Conflict must be resolved manually by editing the file.  
+- After resolution, Git requires staging and committing before completing merge.  
+- Conflict resolution is a normal part of collaborative development workflow.  
+
+---
+
+## Real World Use Case
+
+In software development teams, multiple developers may work on the same file simultaneously.
+
+Example:
+
+Developer A changes:
+
+```text
+login-button = blue
+```
+
+Developer B changes:
+
+```text
+login-button = red
+```
+
+When merging branches, Git detects both changes and creates conflict.
+
+Developer must manually decide final version.
+
+Example workflow:
+
+```bash
+git merge feature-branch
+# conflict occurs
+
+notepad file.txt
+git add .
+git commit -m "resolved conflict"
+git push origin main
+```
+
+Purpose:
+
+- Prevent accidental overwriting of code changes.
+
+---
+
+## Final Understanding
+
+This task provided practical understanding of one of the most important Git concepts.
+
+Important understanding:
+
+- Conflict happens only when both branches modify the same file differently.  
+- Git pauses merge process when automatic merge is not possible.  
+- Developer must manually resolve conflict and complete merge process.  
+
+Merge conflict handling is an essential part of real-world software development and team collaboration.
+
+---
+
+**Task Completed Successfully**
