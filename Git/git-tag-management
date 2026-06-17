@@ -1,0 +1,190 @@
+# Git Tag Management and Tag Behavior Task
+
+## Objective
+
+The objective of this task was to understand how Git Tags work in a repository, how tags are associated with commits instead of branches, and how tag references behave when multiple branches share the same or different commit history.
+
+This task also involved practicing tag creation, deletion (local and remote), and understanding whether a tag can be moved from one branch to another branch.
+
+---
+
+## Task Overview
+
+In Git, a **tag** is a reference that points to a specific commit. It is generally used to mark important versions of a project such as:
+
+- v1.0  
+- v2.0  
+- release-v1  
+- production-release  
+
+The purpose of this task was to explore the behavior of tags in a multi-branch repository and understand how Git internally manages tag references.
+
+---
+
+## Work Performed
+
+### 1. Created Tags on Different Branches
+
+Different branches were checked out and unique tags were created on separate commits.
+
+Commands used:
+
+```bash
+git tag branch1-v1
+git tag branch2-v1
+git tag branch4-v1
+```
+
+Tags were pushed to GitHub:
+
+```bash
+git push origin branch1-v1
+git push origin branch2-v1
+git push origin branch4-v1
+```
+
+Purpose:
+
+- Understand how tags are created  
+- Learn how tags point to a particular commit  
+
+---
+
+### 2. Observed Tag Visibility Across Branches
+
+After switching branches, it was observed that tags remained visible even when changing branches.
+
+Observation:
+
+- Tags created in one branch were visible while viewing another branch.
+
+Conclusion:
+
+- Tags do **not belong to branches**  
+- Tags are attached to commits  
+- If multiple branches share the same commit history, the tag can appear across those branches  
+
+---
+
+### 3. Understanding Tag Association with Branches
+
+A scenario was tested to understand whether a tag created in one branch can be moved to another branch.
+
+Question explored:
+
+- If branch1 and branch2 share the same commit, can a tag created in branch1 move to branch2?
+
+Learning outcome:
+
+- Tags cannot be moved in a branch-specific way  
+- A tag always points to a commit hash  
+- If another branch contains that commit, the tag becomes visible there as well  
+
+---
+
+### 4. Local Tag Deletion
+
+Previously created tags were deleted from the local repository.
+
+Commands used:
+
+```bash
+git tag -d branch3-v1
+git tag -d branch4-v1
+```
+
+Purpose:
+
+- Understand how local tag references are removed  
+
+---
+
+### 5. Remote Tag Deletion from GitHub
+
+After deleting local tags, remote tags were removed from GitHub.
+
+Commands used:
+
+```bash
+git push origin :refs/tags/branch3-v1
+git push origin :refs/tags/branch4-v1
+```
+
+Purpose:
+
+- Understand how remote tags are deleted separately from local tags  
+
+Observation:
+
+- Deleting a local tag does not delete the remote GitHub tag automatically  
+- Remote deletion requires a separate push command  
+
+---
+
+### 6. Release Deletion from GitHub
+
+GitHub releases connected with specific tags were deleted manually through the GitHub web interface.
+
+Purpose:
+
+- Understand relationship between Git Tags and GitHub Releases  
+
+Learning outcome:
+
+- GitHub Release is built on top of a Git Tag  
+- Deleting a tag does not automatically delete a GitHub Release  
+- Release deletion must be handled separately  
+
+---
+
+## Commands Practiced
+
+```bash
+git tag <tag-name>
+git push origin <tag-name>
+
+git tag -d <tag-name>
+
+git push origin :refs/tags/<tag-name>
+```
+
+---
+
+## Key Learnings
+
+- Git Tags are attached to commits, not branches  
+- Tags remain visible if multiple branches share the tagged commit  
+- Tags cannot be branch-specific references  
+- Local and remote tag deletion are separate operations  
+- GitHub Releases are associated with tags but managed separately  
+- Tags are used for version management and release tracking  
+
+---
+
+## Real World Use Case
+
+Tags are commonly used to mark stable versions of software.
+
+Examples:
+
+- v1.0 → Initial Release  
+- v2.0 → Feature Update  
+- v3.0 → Production Deployment  
+
+Developers can return to any tagged version:
+
+```bash
+git checkout v1.0
+```
+
+---
+
+## Final Understanding
+
+This task provided practical understanding of how Git manages tags internally and clarified an important concept:
+
+- Branches represent development lines  
+- Commits represent code snapshots  
+- Tags represent named references to important commits  
+
+**A Git Tag is commit-based, not branch-based.**
