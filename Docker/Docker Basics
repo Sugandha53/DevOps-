@@ -1,0 +1,91 @@
+Docker Basics
+
+Overview
+
+Docker is a platform used to build, package, and run applications in lightweight and isolated environments called containers.
+
+During my internship, I studied the fundamentals of Docker and understood how containers are used in DevOps environments.
+
+1. What is Docker?
+
+Docker is a containerization platform that packages an application along with its required dependencies into a container.
+
+A container provides an isolated environment in which an application can run consistently across different systems.
+
+2. Why is Docker Used?
+
+Docker is commonly used to:
+
+- Package applications with their dependencies
+- Create consistent development and testing environments
+- Run applications in isolated containers
+- Make application deployment easier
+- Reduce environment-related issues
+
+3. Docker vs Virtual Machine
+
+Docker containers and virtual machines both provide isolation, but they work differently.
+
+Virtual Machine:
+- Includes a complete guest operating system
+- Generally requires more resources
+- Uses a hypervisor
+
+Docker Container:
+- Shares the host operating system kernel
+- Is lightweight compared with a VM
+- Starts quickly
+- Packages the application and its dependencies
+
+4. Basic Docker Architecture
+
+The basic Docker workflow consists of:
+
+Docker Client → Docker Host → Docker Container
+
+Docker Client:
+Used to interact with Docker through commands.
+
+Docker Host:
+The system where Docker Engine runs.
+
+Docker Image:
+A read-only template used to create containers.
+
+Docker Container:
+A running instance of a Docker image.
+
+5. Important Docker Terms
+
+Image:
+A packaged template containing the application and its dependencies.
+
+Container:
+A running instance of an image.
+
+Dockerfile:
+A text file containing instructions used to build a Docker image.
+
+Docker Hub:
+A public registry where Docker images can be stored and shared.
+
+Docker Engine:
+The component responsible for creating and running Docker containers.
+
+6. Basic Docker Workflow
+
+The basic Docker workflow is:
+
+Create or obtain an image
+        ↓
+Run the image
+        ↓
+Docker creates a container
+        ↓
+Application runs inside the container
+
+7. Learning Outcome
+
+Through this topic, I gained a basic understanding of Docker, containerization, Docker images, containers, Dockerfiles, Docker Hub, and the basic Docker architecture.
+
+I also understood why Docker is commonly used in DevOps for creating consistent and isolated application environments.
