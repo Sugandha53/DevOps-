@@ -1,0 +1,86 @@
+Terraform
+
+1. What is Terraform?
+
+Terraform is an Infrastructure as Code (IaC) tool used to define and manage infrastructure using configuration files.
+
+It allows infrastructure to be described as code instead of creating every resource manually through a cloud provider's console.
+
+2. Infrastructure as Code
+
+Infrastructure as Code means managing infrastructure through configuration files.
+
+Instead of manually creating resources, the required infrastructure can be defined in a configuration file and Terraform can use that configuration to create or manage the resources.
+
+3. Why Terraform is Used
+
+Terraform can help to:
+
+- Automate infrastructure creation
+- Maintain infrastructure configuration as code
+- Make infrastructure changes easier to manage
+- Reduce repetitive manual configuration
+- Keep infrastructure configurations consistent
+
+4. Terraform Configuration Files
+
+Terraform configuration is generally written in files with the `.tf` extension.
+
+Example:
+
+main.tf
+
+The configuration file contains blocks that describe the infrastructure that Terraform should manage.
+
+5. Terraform Workflow
+
+The basic Terraform workflow is:
+
+Write Configuration
+        ↓
+terraform init
+        ↓
+terraform validate
+        ↓
+terraform plan
+        ↓
+terraform apply
+        ↓
+Manage Infrastructure
+        ↓
+terraform destroy
+
+6. Terraform Provider
+
+A provider allows Terraform to interact with a particular platform or service.
+
+For example, the AWS provider allows Terraform to work with AWS resources.
+
+7. Terraform Resource
+
+A resource represents an infrastructure component that Terraform manages.
+
+For example, an AWS resource can be defined in Terraform to create or manage a cloud resource.
+
+8. Terraform State
+
+Terraform maintains a state file to keep track of the infrastructure managed by Terraform.
+
+The state helps Terraform understand the relationship between the configuration and the resources that have been created.
+
+9. Basic Terraform Commands
+
+Some commonly used Terraform commands are:
+
+terraform init
+terraform validate
+terraform fmt
+terraform plan
+terraform apply
+terraform destroy
+
+10. Learning Outcome
+
+Through this topic, I gained a basic understanding of Terraform and Infrastructure as Code.
+
+I learned how Terraform configuration files, providers, resources, and state are related and understood the basic workflow used to manage infrastructure with Terraform.
