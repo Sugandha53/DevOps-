@@ -1,0 +1,110 @@
+Variables, Outputs and State
+
+1. Terraform Variables
+
+Terraform variables are used to make configuration files more flexible and reusable.
+
+Instead of directly writing the same value in multiple places, a variable can be used.
+
+Example:
+
+variable "region" {
+  default = "ap-south-1"
+}
+
+The variable can then be used in the configuration with:
+
+var.region
+
+2. Why Variables Are Used
+
+Variables can help to:
+
+- Avoid hard-coding values
+- Make configurations easier to modify
+- Reuse the same configuration with different values
+- Keep configuration organized
+
+3. Variable Types
+
+Terraform supports different types of values, such as:
+
+- String
+- Number
+- Boolean
+- List
+- Map
+
+For basic Terraform configurations, I studied the use of simple string and number variables.
+
+4. Terraform Outputs
+
+Outputs are used to display useful information after Terraform creates or manages resources.
+
+Example:
+
+output "bucket_name" {
+  value = aws_s3_bucket.example.bucket
+}
+
+The output can provide information such as a resource name or other useful resource details.
+
+5. Why Outputs Are Used
+
+Outputs can help to:
+
+- Display important resource information
+- Easily access values after deployment
+- Use information from one part of a Terraform configuration in another context
+
+6. Terraform State
+
+Terraform uses a state file to keep track of the infrastructure it manages.
+
+The state helps Terraform understand:
+
+- Which resources are currently managed
+- The relationship between configuration and infrastructure
+- The current state of managed resources
+
+7. terraform.tfstate
+
+The default Terraform state is stored in a file called:
+
+terraform.tfstate
+
+This file contains information about the resources managed by Terraform.
+
+8. Why State is Important
+
+Terraform compares the configuration with the stored state and the actual infrastructure to determine what changes are required.
+
+Basic flow:
+
+Configuration
+      ↓
+Terraform State
+      ↓
+Actual Infrastructure
+      ↓
+Terraform determines required changes
+
+9. Basic Workflow with Variables and Outputs
+
+Define Variables
+      ↓
+Use Variables in Configuration
+      ↓
+Define Resources
+      ↓
+Apply Configuration
+      ↓
+Terraform Creates Resources
+      ↓
+Outputs Display Information
+
+10. Learning Outcome
+
+Through this topic, I learned the basic purpose of Terraform variables, outputs, and state.
+
+I understood how variables make configurations flexible, how outputs display useful information about resources, and how Terraform state helps track infrastructure managed by Terraform.
