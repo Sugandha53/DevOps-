@@ -1,0 +1,123 @@
+Services and YAML
+
+1. Kubernetes Services
+
+A Kubernetes Service provides a stable way to access an application running inside Pods.
+
+Pods can be created, deleted, or replaced, so their individual network information can change. A Service provides a consistent way to communicate with the application.
+
+2. Why Services Are Used
+
+Services are used to:
+
+- Provide a stable network endpoint
+- Connect users or other applications to Pods
+- Distribute traffic between multiple Pods
+- Make applications accessible within or outside the cluster
+
+3. Service and Pods
+
+A Service uses labels to identify the Pods to which it should send traffic.
+
+Basic flow:
+
+User/Application
+       ↓
+    Service
+       ↓
+   Kubernetes Pods
+       ↓
+   Application
+
+4. Types of Services
+
+I studied the basic purpose of the commonly used Kubernetes Service types:
+
+ClusterIP:
+Used to expose an application inside the Kubernetes cluster.
+
+NodePort:
+Used to make an application accessible through a port on a Kubernetes node.
+
+LoadBalancer:
+Used to expose an application externally through a load balancer when supported by the environment.
+
+5. Service YAML
+
+A Service can be defined using a YAML configuration file.
+
+Example:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
+
+6. Important Service Fields
+
+apiVersion:
+Specifies the Kubernetes API version being used.
+
+kind:
+Specifies the type of Kubernetes resource.
+
+metadata:
+Contains information such as the resource name.
+
+selector:
+Identifies the Pods that the Service should connect to.
+
+ports:
+Defines the port used by the Service and the target port of the application.
+
+type:
+Defines how the Service is exposed.
+
+7. Applying a Service Configuration
+
+A Service can be created using:
+
+kubectl apply -f service.yaml
+
+8. Checking Services
+
+Services in a Kubernetes cluster can be viewed using:
+
+kubectl get services
+
+A shorter version of the command is:
+
+kubectl get svc
+
+9. Describing a Service
+
+Detailed information about a Service can be viewed using:
+
+kubectl describe service <service-name>
+
+10. Basic YAML Workflow
+
+Create YAML file
+       ↓
+Define Kubernetes resource
+       ↓
+kubectl apply -f file.yaml
+       ↓
+Kubernetes creates the resource
+       ↓
+kubectl get services
+       ↓
+Check the resource status
+
+11. Learning Outcome
+
+Through this topic, I learned the purpose of Kubernetes Services and how they provide stable access to Pods.
+
+I also learned how Kubernetes resources can be defined using YAML files and practiced basic Service configuration and kubectl commands.
