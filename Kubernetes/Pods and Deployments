@@ -1,0 +1,132 @@
+Pods and Deployments
+
+1. Pods
+
+A Pod is the smallest deployable unit in Kubernetes. It represents a running instance of an application and can contain one or more containers.
+
+In a simple application, a Pod commonly contains one container.
+
+Basic structure:
+
+Kubernetes
+    ↓
+  Node
+    ↓
+  Pod
+    ↓
+Container
+
+2. Pod Configuration
+
+Pods can be defined using YAML configuration files.
+
+A basic Pod definition includes:
+
+- apiVersion
+- kind
+- metadata
+- spec
+- containers
+- container name
+- container image
+
+Example:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+3. Creating a Pod
+
+A Pod can be created using the kubectl apply command.
+
+Example:
+
+kubectl apply -f pod.yaml
+
+The `-f` option specifies the YAML file containing the Kubernetes configuration.
+
+4. Checking Pods
+
+The following command can be used to check Pods:
+
+kubectl get pods
+
+More information about a specific Pod can be viewed using:
+
+kubectl describe pod <pod-name>
+
+5. Deployments
+
+A Deployment is a Kubernetes resource used to manage Pods.
+
+Instead of manually creating and managing individual Pods, a Deployment can maintain the required number of Pod replicas.
+
+6. Replicas
+
+A Deployment can specify how many copies of a Pod should be running.
+
+For example:
+
+replicas: 3
+
+This tells Kubernetes to maintain three running Pods for the Deployment.
+
+7. Creating a Deployment
+
+A Deployment can be defined using a YAML file.
+
+Example:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+
+8. Applying a Deployment
+
+A Deployment can be created using:
+
+kubectl apply -f deployment.yaml
+
+9. Checking Deployments
+
+Deployments can be viewed using:
+
+kubectl get deployments
+
+The Pods created by the Deployment can be checked using:
+
+kubectl get pods
+
+10. Basic Scaling
+
+The number of replicas in a Deployment can be changed according to the required application capacity.
+
+Example:
+
+kubectl scale deployment nginx-deployment --replicas=3
+
+11. Learning Outcome
+
+Through this topic, I learned about Kubernetes Pods and Deployments and understood how Deployments are used to manage multiple instances of application Pods.
+
+I also practiced defining Kubernetes resources using YAML and using kubectl commands to create and check Pods and Deployments.
