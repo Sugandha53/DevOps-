@@ -1,0 +1,103 @@
+Kubernetes Basics
+
+Overview
+
+Kubernetes is an open-source container orchestration platform used to deploy, manage, and scale containerized applications.
+
+During my internship learning, I studied the basic concepts of Kubernetes and understood how it helps manage containers in a structured environment.
+
+1. What is Kubernetes?
+
+Kubernetes is a platform used to manage containerized applications.
+
+It helps with tasks such as:
+
+- Deploying applications
+- Managing containers
+- Maintaining application availability
+- Scaling applications
+- Managing application resources
+
+2. Why is Kubernetes Used?
+
+When applications run in multiple containers, managing each container manually can become difficult.
+
+Kubernetes helps automate and organize the management of these containers.
+
+3. Kubernetes Cluster
+
+A Kubernetes environment is called a cluster.
+
+A cluster consists of:
+
+- Control Plane
+- Worker Nodes
+
+The Control Plane manages the Kubernetes cluster, while Worker Nodes run application workloads.
+
+4. Node
+
+A Node is a machine in a Kubernetes cluster where application workloads can run.
+
+A node can run one or more Pods.
+
+5. Pod
+
+A Pod is the smallest deployable unit in Kubernetes.
+
+A Pod can contain one or more containers that share network and storage resources.
+
+A simple structure is:
+
+Kubernetes Cluster
+        ↓
+      Node
+        ↓
+      Pod
+        ↓
+   Container
+
+6. Deployment
+
+A Deployment is a Kubernetes resource used to manage Pods.
+
+It helps maintain the desired number of running Pods and allows applications to be updated or scaled.
+
+7. Service
+
+A Service provides a stable way to access an application running inside Kubernetes Pods.
+
+Since Pods can be created or removed, their network information can change. A Service provides a consistent way to communicate with the Pods.
+
+8. Kubernetes YAML
+
+Kubernetes resources can be defined using YAML configuration files.
+
+A YAML file generally describes:
+
+- Resource type
+- Resource name
+- Desired configuration
+- Application details
+
+For example, Kubernetes resources such as Pods and Deployments can be defined using YAML files.
+
+9. Basic Kubernetes Workflow
+
+A basic workflow can be understood as:
+
+Create YAML Configuration
+        ↓
+kubectl apply
+        ↓
+Kubernetes creates the Resource
+        ↓
+Check Resource Status
+        ↓
+Manage the Application
+
+10. Learning Outcome
+
+Through this topic, I gained a basic understanding of Kubernetes and its main components, including clusters, nodes, Pods, Deployments, Services, and YAML configuration.
+
+I also understood how Kubernetes helps manage containerized applications.
