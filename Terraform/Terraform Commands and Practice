@@ -1,0 +1,123 @@
+Terraform Commands and Practice
+
+1. Introduction
+
+Terraform provides command-line tools for initializing, checking, planning, applying, and removing infrastructure configurations.
+
+During my internship learning, I practiced the basic Terraform commands and understood their purpose in the Infrastructure as Code workflow.
+
+2. Terraform Init
+
+The `terraform init` command initializes a Terraform working directory.
+
+It prepares the directory and downloads the required provider plugins.
+
+Command:
+
+terraform init
+
+3. Terraform Validate
+
+The `terraform validate` command checks whether the Terraform configuration is syntactically valid and internally consistent.
+
+Command:
+
+terraform validate
+
+4. Terraform Format
+
+The `terraform fmt` command formats Terraform configuration files into a consistent style.
+
+Command:
+
+terraform fmt
+
+5. Terraform Plan
+
+The `terraform plan` command shows the changes Terraform intends to make to the infrastructure.
+
+Command:
+
+terraform plan
+
+It allows the configuration changes to be reviewed before applying them.
+
+6. Terraform Apply
+
+The `terraform apply` command applies the configuration and creates or modifies the required infrastructure.
+
+Command:
+
+terraform apply
+
+Terraform displays the planned changes before applying them.
+
+7. Terraform Destroy
+
+The `terraform destroy` command removes the infrastructure managed by the Terraform configuration.
+
+Command:
+
+terraform destroy
+
+This command should be used carefully because it can remove managed resources.
+
+8. Basic Terraform Workflow
+
+The basic workflow I practiced was:
+
+Create Configuration
+        ↓
+terraform init
+        ↓
+terraform fmt
+        ↓
+terraform validate
+        ↓
+terraform plan
+        ↓
+terraform apply
+        ↓
+Check Resources
+        ↓
+terraform destroy
+
+9. Basic Command Summary
+
+Command | Purpose
+
+terraform init | Initialize the Terraform working directory
+
+terraform fmt | Format Terraform configuration
+
+terraform validate | Validate the configuration
+
+terraform plan | Preview infrastructure changes
+
+terraform apply | Apply the configuration
+
+terraform destroy | Remove managed infrastructure
+
+10. Practice with AWS
+
+I studied the basic workflow of using Terraform with AWS.
+
+The general process is:
+
+Terraform Configuration
+        ↓
+AWS Provider
+        ↓
+Terraform Plan
+        ↓
+Terraform Apply
+        ↓
+AWS Resource
+
+This helped me understand how Infrastructure as Code can be used to manage cloud resources.
+
+11. Learning Outcome
+
+Through this practice, I became familiar with the most commonly used Terraform commands and understood their role in the Infrastructure as Code workflow.
+
+I also learned how to initialize, format, validate, preview, apply, and remove Terraform-managed infrastructure.
